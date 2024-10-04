@@ -1,23 +1,24 @@
 import './globals.css';
 
-import { ThemeProvider } from '@mui/material';
+import { CssBaseline, StyledEngineProvider, ThemeProvider } from '@mui/material';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import type { Metadata } from 'next';
-// import { Lexend, Manrope } from 'next/font/google';
+import { Lexend, Manrope } from 'next/font/google';
 
 import { globalEnv } from '@/config/globalEnv';
 import theme from '@/config/theme';
 
-// const lexend = Lexend({
-//   weight: ['200', '300', '400', '500', '600', '700', '800'],
-//   subsets: ['latin'],
-//   variable: '--font-lexend',
-// });
+const lexend = Lexend({
+  weight: ['200', '300', '400', '500', '600', '700', '800'],
+  subsets: ['latin'],
+  variable: '--font-lexend',
+});
 
-// const manrope = Manrope({
-//   weight: ['200', '300', '400', '500', '600', '700', '800'],
-//   subsets: ['latin'],
-//   variable: '--font-manrope',
-// });
+const manrope = Manrope({
+  weight: ['200', '300', '400', '500', '600', '700', '800'],
+  subsets: ['latin'],
+  variable: '--font-manrope',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(globalEnv.URL),
@@ -32,8 +33,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body id="__next">
-        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <body id="__next" className={`${lexend.variable} ${manrope.variable}`}>
+        <StyledEngineProvider injectFirst>
+          <AppRouterCacheProvider options={{ key: 'css', prepend: true }}>
+            <ThemeProvider theme={theme}>
+              <CssBaseline />
+              {children}
+            </ThemeProvider>
+          </AppRouterCacheProvider>
+        </StyledEngineProvider>
       </body>
     </html>
   );
