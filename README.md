@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nguyen Le - Personal Portfolio
+
+## Introduction
+
+Welcome to my personal website! Here, you'll find an overview of my professional experience, skills, and accomplishments. Whether you're looking for detailed insights into my work as a full-stack developer or a quick way to download my CV, this platform provides everything in one place. Explore my journey and feel free to reach out if you'd like to connect!
+
+## Technologies
+
+- Framework: Next.js (version 14.2.14)
+- Programming Language: JavaScript/TypeScript
+- Styling: CSS/SCSS/TailwindCSS/Styled Components
+- API: Node.js
+- Deployment: Vercel
+
+## Installation
+
+To set up the project locally, follow these steps:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/ldhnguyen9292/nguyenle.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd nguyenle
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+4. Set up environment variables:
+
+Create a `.env.local` file in the root directory and add your environment variables:
+
+```bash
+URL=yoururl
+LOGO_EMAIL_URL=yourlogoemailurl
+```
 
 ## Getting Started
 
-First, run the development server:
+- To start the development server, run:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- To build for production:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+# or
+yarn build
+```
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- SSR (Server-Side Rendering): Provides optimized server-side rendering for better performance.
+- CSR (Client-Side Rendering): Supports dynamic client-side interactions.
+- SEO-Friendly: Out-of-the-box SEO support for better search engine ranking.
+- Fast Refresh: Enjoy fast reloads for a better development experience.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+/nguyenle
+│   ├── /src
+│   ├── ├── /app           # Main source
+│   ├── ├── /pages         # Page routes of the app
+│   ├── ├── /components    # Reusable components
+│   ├── /public            # Static assets (images, fonts, etc.)
+│   └── /package.json      # Project dependencies and scripts
+```
