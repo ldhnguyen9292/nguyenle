@@ -10,6 +10,8 @@
     "source.fixAll.eslint": "always"
   },
   "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "cSpell.words": ["lexend"],
   "prettier.useEditorConfig": false,
-  "editor.tabSize": 2
+  "prettier.singleQuote": true
 }
