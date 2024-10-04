@@ -1,0 +1,15 @@
+{
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll.eslint": "always"
+  },
+  "editor.formatOnSave": true,
+  "prettier.useEditorConfig": false,
+  "editor.tabSize": 2
+}
