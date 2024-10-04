@@ -67,10 +67,12 @@ yarn build
 
 ## Features
 
-- SSR (Server-Side Rendering): Provides optimized server-side rendering for better performance.
-- CSR (Client-Side Rendering): Supports dynamic client-side interactions.
-- SEO-Friendly: Out-of-the-box SEO support for better search engine ranking.
-- Fast Refresh: Enjoy fast reloads for a better development experience.
+- Static Site: Fully static website for fast load times and optimized performance.
+- SEO-Friendly: Optimized for search engines with proper metadata, sitemaps, and clean URLs.
+- Responsive Design: Fully responsive layout to ensure a seamless experience on all devices.
+- CV Download: Easily downloadable CV in PDF format.
+- Lightweight: Minimal dependencies for quicker build times and faster deployment.
+- Custom Styling: Unique design and styling to reflect a personal brand.
 
 ## Project Structure
 
