@@ -68,7 +68,6 @@ yarn build
 ## Features
 
 - Static Site: Fully static website for fast load times and optimized performance.
-- SEO-Friendly: Optimized for search engines with proper metadata, sitemaps, and clean URLs.
 - Responsive Design: Fully responsive layout to ensure a seamless experience on all devices.
 - CV Download: Easily downloadable CV in PDF format.
 - Lightweight: Minimal dependencies for quicker build times and faster deployment.
@@ -80,8 +79,9 @@ yarn build
 /nguyenle
 │   ├── /src
 │   ├── ├── /app           # Main source
-│   ├── ├── /pages         # Page routes of the app
+│   ├── ├── /features      # Features
 │   ├── ├── /components    # Reusable components
+│   ├── ├── /config        # App configuration
 │   ├── /public            # Static assets (images, fonts, etc.)
 │   └── /package.json      # Project dependencies and scripts
 ```
