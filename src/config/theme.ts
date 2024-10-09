@@ -14,9 +14,6 @@ const theme = createTheme({
       '2xl': 1536,
     },
   },
-  typography: {
-    fontFamily: 'var(--font-lexend)',
-  },
 });
 
 declare module '@mui/material/styles' {
