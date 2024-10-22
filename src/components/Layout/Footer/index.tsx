@@ -1,9 +1,9 @@
-import linkedin from '@/assets/images/linkedin.png';
+import linkedin from '@/assets/images/linkedin.svg';
 import topButton from '@/assets/images/top-button.png';
 import { Image } from '@/components/Elements';
 
-const SocialNetworks = {
-  linkedin: { src: linkedin.src, name: 'LinkedIn' },
+const SocialNetworkIcons = {
+  linkedin: { src: linkedin, name: 'LinkedIn' },
 };
 
 const Footer: React.FC = () => {
@@ -20,15 +20,14 @@ const Footer: React.FC = () => {
       <section className="bg-primary-2 min-w-full h-23.5 border-b-2 border-solid border-b-primary-0 flex align-center justify-around mr-5">
         <div></div>
         <div className="flex align-center justify-end m-2">
-          {Object.entries(SocialNetworks).map(([key, value], index) => {
+          {Object.entries(SocialNetworkIcons).map(([key, icon], index) => {
             return (
-              <Image
+              <icon.src
                 key={key + index}
-                src={value.src}
-                alt={value.name}
+                alt={icon.name}
                 width={76}
                 height={70}
-                className="cursor-pointer"
+                className="cursor-pointer fill-gray hover:fill-white"
               />
             );
           })}

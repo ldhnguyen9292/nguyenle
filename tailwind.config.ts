@@ -16,6 +16,7 @@ const config: Config = {
       primary: { 0: '#000000', 1: '#171A1F', 2: '#111111' },
       secondary: { 0: '#ffffff', 1: '#f3f4f6', 2: '#eff0ef' },
       tertiary: { 0: '#4dbeff' },
+      fourth: '#202020',
     },
     borderColor: {
       primary: { 0: '#323232FF' },
@@ -37,6 +38,10 @@ const config: Config = {
       23.5: '5.875rem', // 94px
       25: '6.25rem', // 100px
       35: '8.75rem', // 140px
+    },
+    fill: {
+      gray: '#202020',
+      white: '#ffffff',
     },
   },
   plugins: [],
