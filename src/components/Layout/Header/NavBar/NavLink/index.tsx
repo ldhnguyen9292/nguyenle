@@ -8,7 +8,7 @@ interface NavLinkProps extends ComponentProps<typeof NextLink> {
 }
 
 const NavLink: React.FC<NavLinkProps> = ({ children, isActive, ...props }) => {
-  const className = `bg-none px-2 py-1 pointer ${isActive ? 'bg-secondary-1 rounded-full' : ''}`.trim();
+  const className = `bg-none px-2 py-1 pointer ${isActive ? 'bg-secondary-1 rounded-3' : ''}`.trim();
 
   return (
     <Link className={className} {...props}>
