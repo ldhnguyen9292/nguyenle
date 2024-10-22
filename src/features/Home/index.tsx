@@ -1,8 +1,10 @@
+import AboutMe from './AboutMe';
+
 const Home: React.FC = () => {
   return (
-    <div>
-      <h1 className="">Home</h1>
-    </div>
+    <section>
+      <AboutMe />
+    </section>
   );
 };
 
