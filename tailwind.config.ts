@@ -17,6 +17,9 @@ const config: Config = {
       secondary: { 0: '#ffffff', 1: '#f3f4f6', 2: '#eff0ef' },
       tertiary: { 0: '#4dbeff' },
     },
+    borderColor: {
+      primary: { 0: '#323232FF' },
+    },
     fontFamily: {
       heading: ['var(--font-lexend)', 'sans-serif'],
       body: ['var(--font-manrope)', 'sans-serif'],
@@ -31,7 +34,9 @@ const config: Config = {
       33: '8.25rem', // 132px
     },
     height: {
+      23.5: '5.875rem', // 94px
       25: '6.25rem', // 100px
+      35: '8.75rem', // 140px
     },
   },
   plugins: [],
