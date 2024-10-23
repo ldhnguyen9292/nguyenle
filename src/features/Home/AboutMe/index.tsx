@@ -6,7 +6,7 @@ import { Container, Image, Text } from '@/components/Elements';
 const AboutMe: React.FC = () => {
   return (
     <section id="about-me" className="relative h-160">
-      <div className={"absolute min-w-full min-h-full bg-[url('/images/about-me-cover.jpeg')] bg-cover z-[-1]"}></div>
+      <div className={"absolute min-w-full min-h-full bg-[url('/images/about-me-cover.jpeg')] bg-cover"}></div>
       <Container>
         <Grid2
           container
@@ -30,7 +30,7 @@ const AboutMe: React.FC = () => {
               alt="Nguyen"
               width={295}
               height={610}
-              className="absolute left-[50%] translate-x-[-50%] top-[-40px]"
+              className="absolute left-center translate-x-center top-[-40px]"
             />
           </Grid2>
         </Grid2>

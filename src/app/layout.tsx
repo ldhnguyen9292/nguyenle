@@ -5,6 +5,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import type { Metadata } from 'next';
 import { Lexend, Manrope } from 'next/font/google';
 
+import { Container } from '@/components/Elements';
 import { Footer, Header } from '@/components/Layout';
 import { globalEnv } from '@/config/globalEnv';
 import theme from '@/config/theme';
@@ -34,14 +35,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body id="__next" className={`${lexend.variable} ${manrope.variable}`}>
+      <body id="__next" className={`${lexend.variable} ${manrope.variable} bg-[#eeedf2]`}>
         <StyledEngineProvider injectFirst>
           <AppRouterCacheProvider options={{ key: 'css', prepend: true }}>
             <ThemeProvider theme={theme}>
               <CssBaseline />
-              <Header />
-              {children}
-              <Footer />
+              <Container className="max-w-360 p-0 overflow-hidden border-x-2 bg-white">
+                <Header />
+                {children}
+                <Footer />
+              </Container>
             </ThemeProvider>
           </AppRouterCacheProvider>
         </StyledEngineProvider>
