@@ -26,28 +26,30 @@ const Experience: React.FC = () => {
       <Grid2 size={9} className="relative">
         <Image.HomeImage src={Boho.src} alt="boho" />
 
-        <Box className="absolute z-20 left-center translate-x-center pt-5 w-max relative">
-          <Text font="heading" className="uppercase font-bold text-x-large pl-72">
-            boho
-          </Text>
-          <List sx={{ listStyleType: 'disc' }} className="text-large pl-64">
-            <Text className="text-base">Responsibilities</Text>
-            {[
-              'Write and manage API resources that can work across devices.',
-              'Integrate VEND API to server.',
-              'Manage the exchange of data and information.',
-              'Build reusable code and libraries for future use.',
-            ].map((text, index) => {
-              return (
-                <ListItem sx={{ display: 'list-item' }} key={index}>
-                  <Text className="text-base">{text}</Text>
-                </ListItem>
-              );
-            })}
-          </List>
+        <Box className="absolute z-20 left-center translate-x-center pt-5 w-max ">
+          <Box className="relative">
+            <Text font="heading" className="uppercase font-bold text-x-large pl-72">
+              boho
+            </Text>
+            <List sx={{ listStyleType: 'disc' }} className="text-large pl-64">
+              <Text className="text-base">Responsibilities</Text>
+              {[
+                'Write and manage API resources that can work across devices.',
+                'Integrate VEND API to server.',
+                'Manage the exchange of data and information.',
+                'Build reusable code and libraries for future use.',
+              ].map((text, index) => {
+                return (
+                  <ListItem sx={{ display: 'list-item' }} key={index}>
+                    <Text className="text-base">{text}</Text>
+                  </ListItem>
+                );
+              })}
+            </List>
 
-          {/* See more */}
-          <Button.SeeMoreButton onClick={() => {}} className="absolute right-0 bottom-[-50px]" />
+            {/* See more */}
+            <Button.SeeMoreButton onClick={() => {}} className="absolute right-0 bottom-[-50px]" />
+          </Box>
         </Box>
 
         {/* Navigation */}
