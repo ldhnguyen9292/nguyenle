@@ -75,7 +75,7 @@ const Experience: React.FC = () => {
               icon={<ArrowCircleRightOutlinedIcon />}
               onClick={onNext}
               disabled={currentPage >= totalPages}
-              className="text-gray-200 min-w-10 outline-none"
+              className="text-gray-200 min-w-10"
             />
           </Tabs>
         </Box>

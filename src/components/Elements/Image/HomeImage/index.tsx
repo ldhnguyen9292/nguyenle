@@ -1,7 +1,7 @@
 import NextImage from 'next/image';
 
 const HomeImage: React.FC<React.ComponentProps<typeof NextImage>> = ({ src, alt, ...props }) => {
-  const mergedClassName = `${props.className} absolute max-w-max left-[-75px]`;
+  const mergedClassName = `${props.className ? props.className : ''} absolute max-w-max left-[-75px]`.trim();
   return (
     <NextImage
       {...props}
