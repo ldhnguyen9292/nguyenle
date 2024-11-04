@@ -1,6 +1,9 @@
 import { Typography } from '@mui/material';
 import { twMerge } from 'tailwind-merge';
 
+import { withProperties } from '@/utils/types';
+import HomeTitle from './HomeTitle';
+
 interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
   children: React.ReactNode;
   font?: 'heading' | 'body';
@@ -24,4 +27,4 @@ const Text: React.FC<TextProps> = ({ children, font = 'body', color = 'primary',
   );
 };
 
-export default Text;
+export default withProperties(Text, { HomeTitle });
