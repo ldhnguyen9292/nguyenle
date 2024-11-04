@@ -82,19 +82,19 @@ const Skills: React.FC = () => {
               tabIndex={2}
               icon={<CircleRoundedIcon />}
               onClick={(value) => onChange(value)}
-              className="text-primary-0 p-0"
+              className="text-primary-0 p-0 min-w-0 mr-2"
             />
             <Tab
               tabIndex={2}
               icon={<CircleRoundedIcon />}
               onClick={(value) => onChange(value)}
-              className="text-primary-0 p-0"
+              className="text-primary-0 p-0 min-w-0 mr-2"
             />
             <Tab
               tabIndex={3}
               icon={<CircleRoundedIcon />}
               onClick={(value) => onChange(value)}
-              className="text-primary-0 p-0"
+              className="text-primary-0 p-0 min-w-0"
             />
           </Tabs>
 

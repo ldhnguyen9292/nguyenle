@@ -12,6 +12,7 @@ const config: Config = {
         primary: '#000000',
         secondary: '#ffffff',
         tertiary: '#ABDFFEFF',
+        fourth: '#4dbeff',
       },
       backgroundColor: {
         primary: { 0: '#000000', 1: '#171A1F', 2: '#111111' },
@@ -39,6 +40,9 @@ const config: Config = {
         '2x-large': '4rem', // 64px
         '3x-large': '5rem', // 80px
         '4x-large': '6rem', // 96px
+      },
+      fontWeight: {
+        'x-bold': '800',
       },
       width: {
         17: '4.25rem', // 68px
