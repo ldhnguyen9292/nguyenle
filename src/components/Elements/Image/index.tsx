@@ -1,8 +1,10 @@
 import NextImage from 'next/image';
-import { ComponentProps } from 'react';
 
-const Image: React.FC<ComponentProps<typeof NextImage>> = ({ src, alt, ...props }) => {
+import { withProperties } from '@/utils/types';
+import HomeImage from './HomeImage';
+
+const Image: React.FC<React.ComponentProps<typeof NextImage>> = ({ src, alt, ...props }) => {
   return <NextImage src={src} alt={alt} {...props} />;
 };
 
-export default Image;
+export default withProperties(Image, { HomeImage });

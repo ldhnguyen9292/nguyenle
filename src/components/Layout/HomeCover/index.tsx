@@ -7,60 +7,55 @@ import { Container, Image } from '@/components/Elements';
 import { Grid2 } from '@mui/material';
 
 interface HomeCoverProps {
-  childrenTopLeft: React.ReactNode;
-  childrenTopRight: React.ReactNode;
-  childrenBottomLeft: React.ReactNode;
-  childrenBottomRight: React.ReactNode;
+  childrenTop: React.ReactNode;
+  childrenBottom: React.ReactNode;
 }
 
-const HomeCover: React.FC<HomeCoverProps> = ({
-  childrenTopLeft,
-  childrenTopRight,
-  childrenBottomLeft,
-  childrenBottomRight,
-}) => {
+const HomeCover: React.FC<HomeCoverProps> = ({ childrenTop, childrenBottom }) => {
   return (
     <section className="h-330 relative">
-      <Image src={HomeCover3.src} alt="Home Cover 3" className="absolute z-negative" fill />
+      <Image src={HomeCover3.src} alt="Home Cover 3" className="absolute" fill />
       <Image
         src={HomeCover4.src}
         alt="Home Cover 4"
-        className="absolute z-negative right-0 top-[-200px]"
-        width={514}
-        height={712}
+        className="absolute  right-0 top-[-200px]"
+        width={0}
+        height={0}
+        style={{ width: '514px', height: '712px' }}
       />
       <Image
         src={HomeCover5.src}
         alt="Home Cover 5"
-        className="absolute z-negative right-0 top-[-240px]"
-        width={514}
-        height={712}
+        className="absolute right-0 top-[-240px]"
+        width={0}
+        height={0}
+        style={{ width: '514px', height: '600px' }}
       />
 
       <Image
         src={HomeCover1.src}
         alt="Home Cover 1"
-        className="absolute top-[140px] left-[-81px] h-137.5"
-        width={592}
-        height={548}
+        className="absolute top-[140px] left-[-81px]"
+        width={0}
+        height={0}
+        style={{ width: '592px', height: '550px' }}
       />
       <Image
         src={HomeCover2.src}
         alt="Home Cover 2"
-        className="absolute top-[140px] !left-[320px] h-137.5"
-        width={1440}
-        height={570}
+        className="absolute top-[140px] !left-[320px]"
+        width={0}
+        height={0}
+        style={{ width: '1440px', height: '550px' }}
       />
 
-      <Container className="absolute h-full z-10 left-center translate-x-center p-0">
+      <Container className="h-full z-10 p-0">
         <Grid2 container className="pt-[140px]" spacing={50}>
           <Grid2 container size={12} className="h-125" spacing={0}>
-            <Grid2 size={3}>{childrenTopLeft}</Grid2>
-            <Grid2 size={9}>{childrenTopRight}</Grid2>
+            {childrenTop}
           </Grid2>
           <Grid2 container size={12} className="h-125" spacing={0}>
-            <Grid2 size={9}>{childrenBottomLeft}</Grid2>
-            <Grid2 size={3}>{childrenBottomRight}</Grid2>
+            {childrenBottom}
           </Grid2>
         </Grid2>
       </Container>

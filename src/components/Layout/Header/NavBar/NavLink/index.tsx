@@ -1,9 +1,8 @@
 import NextLink from 'next/link';
-import { ComponentProps } from 'react';
 
 import { Link, Text } from '@/components/Elements';
 
-interface NavLinkProps extends ComponentProps<typeof NextLink> {
+interface NavLinkProps extends React.ComponentProps<typeof NextLink> {
   isActive: boolean;
 }
 

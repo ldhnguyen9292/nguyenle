@@ -11,7 +11,7 @@ const Header: React.FC = () => {
   return (
     <header className="bg-primary-0">
       <AppBar position="static" color="transparent">
-        <Container className="z-20 p-0">
+        <Container className="z-20 py-0 px-5">
           <Toolbar variant="dense">
             <Box className="flex">
               <NavLogo />
