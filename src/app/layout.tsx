@@ -40,7 +40,7 @@ export default function RootLayout({
           <AppRouterCacheProvider options={{ key: 'css', prepend: true }}>
             <ThemeProvider theme={theme}>
               <CssBaseline />
-              <Container className="max-w-360 p-0 overflow-hidden border-x-2 bg-white">
+              <Container className="max-w-360 p-0 overflow-hidden bg-white">
                 <Header />
                 {children}
                 <Footer />

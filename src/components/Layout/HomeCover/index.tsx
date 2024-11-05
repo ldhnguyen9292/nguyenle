@@ -21,6 +21,7 @@ const HomeCover: React.FC<HomeCoverProps> = ({ childrenTop, childrenBottom }) =>
         className="absolute right-0 top-[-200px]"
         width={0}
         height={0}
+        priority
         style={{ width: '514px', height: '712px' }}
       />
       <Image
@@ -29,6 +30,7 @@ const HomeCover: React.FC<HomeCoverProps> = ({ childrenTop, childrenBottom }) =>
         className="absolute right-0 top-[-240px]"
         width={0}
         height={0}
+        priority
         style={{ width: '514px', height: '600px' }}
       />
 
@@ -38,6 +40,7 @@ const HomeCover: React.FC<HomeCoverProps> = ({ childrenTop, childrenBottom }) =>
         className="absolute top-[140px] left-[-81px]"
         width={0}
         height={0}
+        priority
         style={{ width: '592px', height: '550px' }}
       />
       <Image
@@ -46,6 +49,7 @@ const HomeCover: React.FC<HomeCoverProps> = ({ childrenTop, childrenBottom }) =>
         className="absolute top-[140px] !left-[320px]"
         width={0}
         height={0}
+        priority
         style={{ width: '1440px', height: '550px' }}
       />
 
