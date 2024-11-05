@@ -5,18 +5,28 @@ import topButton from '@/assets/images/top-button.png';
 import { Image } from '@/components/Elements';
 
 const SocialNetworkIcons = {
-  linkedin: { src: linkedin, name: 'LinkedIn' },
+  linkedin: { src: linkedin, name: 'LinkedIn', url: 'https://www.linkedin.com/in/nguyen-le-5450b9239' },
 };
 
 const Footer: React.FC = () => {
   // On click to scroll to top
-  const handleClick = () => {
+  const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Redirect to social networks
+  const redirectToSocialNetwork = (url: string) => {
+    window.open(url, '_blank');
+  };
+
+  // Redirect to home page
+  const redirectToHomePage = () => {
+    window.location.href = '/';
   };
 
   return (
     <footer className="relative flex flex-col">
-      <div onClick={handleClick} role="button" tabIndex={0}>
+      <div onClick={scrollToTop} role="button" tabIndex={0}>
         <Image
           src={topButton.src}
           alt="Top Button"
@@ -37,12 +47,13 @@ const Footer: React.FC = () => {
                 width={76}
                 height={70}
                 className="cursor-pointer fill-gray hover:fill-white"
+                onClick={() => redirectToSocialNetwork(icon.url)}
               />
             );
           })}
         </div>
       </section>
-      <section className="bg-primary-0 min-w-full h-35 flex align-center justify-center">
+      <section className="bg-primary-0 min-w-full h-35 flex align-center justify-center" onClick={redirectToHomePage}>
         <Image src="/images/logo.png" alt="Logo" width={200} height={140} priority={true} className="cursor-pointer" />
       </section>
     </footer>
