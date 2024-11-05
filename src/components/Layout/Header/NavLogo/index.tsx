@@ -3,13 +3,21 @@ import { Box } from '@mui/material';
 import { Image } from '@/components/Elements';
 
 interface NavLogoProps {
-  isAbsolute?: boolean;
+  isFixed?: boolean;
 }
 
-const NavLogo: React.FC<NavLogoProps> = ({ isAbsolute = true }) => {
+const NavLogo: React.FC<NavLogoProps> = ({ isFixed }) => {
+  // On click to redirect to home page
+  const handleClick = () => {
+    window.location.href = '/';
+  };
+
   return (
-    <Box className={`relative mr-2 cursor-pointer ${isAbsolute ? 'w-33' : 'w-17'}`}>
-      <Box className={`${isAbsolute ? 'absolute h-25 w-33' : 'w-17'}`}>
+    <Box
+      className={`relative mr-2 cursor-pointer transition-all duration-300 ${isFixed ? 'w-17' : 'w-33'}`}
+      onClick={handleClick}
+    >
+      <Box className={`transition-all duration-300 ${isFixed ? 'w-17' : 'absolute h-25 w-33'}`}>
         <Image src="/images/logo.png" alt="Logo" fill priority={true} />
       </Box>
     </Box>
