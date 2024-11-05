@@ -18,7 +18,7 @@ const HomeCover: React.FC<HomeCoverProps> = ({ childrenTop, childrenBottom }) =>
       <Image
         src={HomeCover4.src}
         alt="Home Cover 4"
-        className="absolute  right-0 top-[-200px]"
+        className="absolute right-0 top-[-200px]"
         width={0}
         height={0}
         style={{ width: '514px', height: '712px' }}

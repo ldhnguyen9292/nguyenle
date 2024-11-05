@@ -71,6 +71,9 @@ const config: Config = {
         160: '40rem', // 640px
         330: '82.5rem', // 1320px
       },
+      minHeight: {
+        97.5: '24.375rem', // 390px
+      },
       fill: {
         gray: '#202020',
         white: '#ffffff',
