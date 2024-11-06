@@ -17,7 +17,7 @@ const config: Config = {
       backgroundColor: {
         primary: { 0: '#000000', 1: '#171A1F', 2: '#111111' },
         secondary: { 0: '#ffffff', 1: '#f3f4f6', 2: '#eff0ef' },
-        tertiary: { 0: '#4dbeff' },
+        tertiary: { 0: '#4dbeff', 1: '#4ebeff' },
         fourth: '#202020',
       },
       borderColor: {
@@ -87,6 +87,20 @@ const config: Config = {
       padding: {
         64: '16rem', // 256px
         72: '18rem', // 288px
+      },
+      keyframes: {
+        'left-to-right': {
+          '0%': { transform: 'translateX(-50px)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        'right-to-left': {
+          '0%': { transform: 'translateX(50px)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+      },
+      animation: {
+        'left-to-right': 'left-to-right 3s ease-in-out',
+        'right-to-left': 'right-to-left 3s ease-in-out',
       },
     },
   },
