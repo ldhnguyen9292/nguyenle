@@ -20,6 +20,7 @@ const Contact: React.FC = () => {
     <Grid2 container className="w-full">
       <Grid2 size={7} className="px-10 py-2">
         <Box
+          id="contact"
           component="form"
           noValidate
           autoComplete="off"

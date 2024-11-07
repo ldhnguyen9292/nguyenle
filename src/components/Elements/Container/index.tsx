@@ -5,11 +5,13 @@ interface ContainerProps extends React.ComponentProps<typeof MUIContainer> {
 }
 
 const Container: React.FC<ContainerProps> = ({ children, ...props }) => {
-  const mergedClassName = `max-w-296 z-10 sticky ${props.className ? props.className : ''}`.trim();
+  const mergedClassName = `max-w-360 w-full mx-auto flex flex-col overflow-hidden bg-secondary-0 ${
+    props.className ? props.className : ''
+  }`.trim();
   return (
-    <MUIContainer {...props} className={mergedClassName}>
+    <div {...props} className={mergedClassName}>
       {children}
-    </MUIContainer>
+    </div>
   );
 };
 

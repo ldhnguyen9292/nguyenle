@@ -14,12 +14,14 @@ const lexend = Lexend({
   weight: ['200', '300', '400', '500', '600', '700', '800'],
   subsets: ['latin'],
   variable: '--font-lexend',
+  display: 'swap',
 });
 
 const manrope = Manrope({
   weight: ['200', '300', '400', '500', '600', '700', '800'],
   subsets: ['latin'],
   variable: '--font-manrope',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -40,7 +42,7 @@ export default function RootLayout({
           <AppRouterCacheProvider options={{ key: 'css', prepend: true }}>
             <ThemeProvider theme={theme}>
               <CssBaseline />
-              <Container className="max-w-360 p-0 overflow-hidden bg-white">
+              <Container>
                 <Header />
                 {children}
                 <Footer />

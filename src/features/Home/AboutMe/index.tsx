@@ -1,13 +1,13 @@
-import { Grid2 } from '@mui/material';
+import { Box, Grid2 } from '@mui/material';
 
-import MyPic from '@/assets/images/my-pic.png';
-import { Container, Image, Text } from '@/components/Elements';
+import MyPic from '@/assets/images/my-pic.webp';
+import { Image, Text } from '@/components/Elements';
 
 const AboutMe: React.FC = () => {
   return (
     <section id="about-me" className="relative h-160">
-      <div className={"absolute min-w-full min-h-full bg-[url('/images/about-me-cover.jpeg')] bg-cover"}></div>
-      <Container>
+      <div className={"absolute min-w-full min-h-full bg-[url('/images/about-me-cover.webp')] bg-cover"}></div>
+      <Box className="z-10 sticky px-20">
         <Grid2
           container
           className="bg-secondary-2 border-b-2 border-r-2 border-l-2 border-secondary-0 rounded-b-15 pt-10 pb-20 pl-10"
@@ -34,7 +34,7 @@ const AboutMe: React.FC = () => {
             />
           </Grid2>
         </Grid2>
-      </Container>
+      </Box>
     </section>
   );
 };

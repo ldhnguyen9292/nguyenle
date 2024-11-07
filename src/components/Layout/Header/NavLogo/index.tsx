@@ -18,7 +18,7 @@ const NavLogo: React.FC<NavLogoProps> = ({ isFixed }) => {
       onClick={handleClick}
     >
       <Box className={`transition-all duration-300 ${isFixed ? 'w-17' : 'absolute h-25 w-33'}`}>
-        <Image src="/images/logo.png" alt="Logo" fill priority={true} />
+        <Image src="/images/logo.webp" alt="Logo" fill priority={true} />
       </Box>
     </Box>
   );

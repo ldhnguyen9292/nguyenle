@@ -3,7 +3,6 @@
 import { AppBar, Box, Toolbar } from '@mui/material';
 import { useCallback, useEffect, useState } from 'react';
 
-import { Container } from '@/components/Elements';
 import DownloadCV from './DownloadCV';
 import NavBar from './NavBar';
 import NavLogo from './NavLogo';
@@ -30,9 +29,9 @@ const Header: React.FC = () => {
     <section>
       <AppBar
         position={`${isFixed ? 'fixed' : 'static'}`}
-        className={`bg-primary-0 max-w-360 ${isFixed ? 'left-center translate-x-center' : ''}`}
+        className={`w-full ${isFixed ? 'max-w-360 left-center translate-x-center' : ''}`}
       >
-        <Container className="z-20 py-0 px-5">
+        <Box className="z-20 py-0 px-5 bg-primary-0">
           <Toolbar variant="dense">
             <Box className="flex">
               <NavLogo isFixed={isFixed} />
@@ -43,7 +42,7 @@ const Header: React.FC = () => {
               <DownloadCV />
             </Box>
           </Toolbar>
-        </Container>
+        </Box>
       </AppBar>
     </section>
   );

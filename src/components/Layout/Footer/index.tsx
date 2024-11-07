@@ -1,7 +1,7 @@
 'use client';
 
 import linkedin from '@/assets/images/linkedin.svg';
-import topButton from '@/assets/images/top-button.png';
+import topButton from '@/assets/images/top-button.webp';
 import { Image } from '@/components/Elements';
 
 const SocialNetworkIcons = {
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
         </div>
       </section>
       <section className="bg-primary-0 min-w-full h-35 flex align-center justify-center" onClick={redirectToHomePage}>
-        <Image src="/images/logo.png" alt="Logo" width={200} height={140} priority={true} className="cursor-pointer" />
+        <Image src="/images/logo.webp" alt="Logo" width={200} height={140} priority={true} className="cursor-pointer" />
       </section>
     </footer>
   );
