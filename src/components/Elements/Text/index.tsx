@@ -4,7 +4,7 @@ import { twMerge } from 'tailwind-merge';
 import { withProperties } from '@/utils/types';
 import HomeTitle from './HomeTitle';
 
-interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
+interface TextProps extends React.ComponentProps<typeof Typography> {
   children: React.ReactNode;
   font?: 'heading' | 'body';
   color?: 'primary' | 'secondary' | 'tertiary';

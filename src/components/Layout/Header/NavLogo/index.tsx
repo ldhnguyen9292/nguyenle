@@ -17,7 +17,7 @@ const NavLogo: React.FC<NavLogoProps> = ({ isFixed }) => {
       className={`relative mr-2 cursor-pointer transition-all duration-300 ${isFixed ? 'w-17' : 'w-33'}`}
       onClick={handleClick}
     >
-      <Box className={`transition-all duration-300 ${isFixed ? 'w-17' : 'absolute h-25 w-33'}`}>
+      <Box className={`transition-all duration-300 ${isFixed ? 'w-17' : 'absolute h-20.5 w-33'}`}>
         <Image src="/images/logo.webp" alt="Logo" fill priority={true} />
       </Box>
     </Box>

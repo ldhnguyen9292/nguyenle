@@ -11,9 +11,7 @@ const Contact: React.FC = () => {
       question: '',
     },
     validationSchema: TextField.validationSchema,
-    onSubmit: (values) => {
-      console.log('Form data:', values);
-    },
+    onSubmit: () => {},
   });
 
   return (
