@@ -35,8 +35,7 @@ const Skills: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
   const onChange = (value: MouseEvent<HTMLDivElement>) => {
-    console.log(value);
-    setCurrentPage(1);
+    setCurrentPage(Number(value.currentTarget.innerHTML));
   };
 
   return (
@@ -79,19 +78,19 @@ const Skills: React.FC = () => {
             }}
           >
             <Tab
-              tabIndex={2}
+              label="first"
               icon={<CircleRoundedIcon />}
               onClick={(value) => onChange(value)}
               className="text-primary-0 p-0 min-w-0 mr-2"
             />
             <Tab
-              tabIndex={2}
+              label="second"
               icon={<CircleRoundedIcon />}
               onClick={(value) => onChange(value)}
               className="text-primary-0 p-0 min-w-0 mr-2"
             />
             <Tab
-              tabIndex={3}
+              label="third"
               icon={<CircleRoundedIcon />}
               onClick={(value) => onChange(value)}
               className="text-primary-0 p-0 min-w-0"

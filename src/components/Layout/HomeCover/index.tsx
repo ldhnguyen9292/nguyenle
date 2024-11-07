@@ -27,7 +27,7 @@ const HomeCover: React.FC<HomeCoverProps> = ({ leftId, rightId, topTitle, topInd
         width={0}
         height={0}
         priority
-        style={{ width: '514px', height: '712px' }}
+        style={{ width: '514px', height: '724px' }}
       />
       <Image
         src={HomeCover5.src}
@@ -36,7 +36,7 @@ const HomeCover: React.FC<HomeCoverProps> = ({ leftId, rightId, topTitle, topInd
         width={0}
         height={0}
         priority
-        style={{ width: '514px', height: '600px' }}
+        style={{ width: '514px', height: '612px' }}
       />
 
       <div className="h-full z-10 p-0">

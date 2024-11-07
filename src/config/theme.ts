@@ -14,6 +14,24 @@ const theme = createTheme({
       '2xl': 1536,
     },
   },
+  components: {
+    MuiTypography: {
+      defaultProps: {
+        variantMapping: {
+          h1: 'h1',
+          h2: 'h2',
+          h3: 'h3',
+          h4: 'h4',
+          h5: 'h5',
+          h6: 'h6',
+          subtitle1: 'h2',
+          subtitle2: 'h2',
+          body1: 'p',
+          body2: 'span',
+        },
+      },
+    },
+  },
 });
 
 declare module '@mui/material/styles' {

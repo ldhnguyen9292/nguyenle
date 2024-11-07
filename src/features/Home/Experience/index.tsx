@@ -26,11 +26,11 @@ const Experience: React.FC<ExperienceProps> = ({ rightId }) => {
     <>
       <Box className="absolute z-20 left-center translate-x-center pt-5 w-max ">
         <Box className="relative">
-          <Text font="heading" className="uppercase font-bold text-x-large pl-72">
+          <Text font="heading" className="uppercase font-bold text-x-large text-center">
             boho
           </Text>
+          <Text className="text-base pl-64">Responsibilities</Text>
           <List sx={{ listStyleType: 'disc' }} className="text-large pl-64">
-            <Text className="text-base">Responsibilities</Text>
             {[
               'Write and manage API resources that can work across devices.',
               'Integrate VEND API to server.',
@@ -38,8 +38,8 @@ const Experience: React.FC<ExperienceProps> = ({ rightId }) => {
               'Build reusable code and libraries for future use.',
             ].map((text, index) => {
               return (
-                <ListItem sx={{ display: 'list-item' }} key={index}>
-                  <Text className="text-base">{text}</Text>
+                <ListItem sx={{ display: 'list-item' }} key={index} className="font-body text-primary text-base">
+                  {text}
                 </ListItem>
               );
             })}
@@ -63,6 +63,7 @@ const Experience: React.FC<ExperienceProps> = ({ rightId }) => {
           }}
         >
           <Tab
+            label="previous"
             icon={<ArrowCircleLeftOutlinedIcon />}
             onClick={onPrevious}
             disabled={currentPage <= 1}
@@ -70,6 +71,7 @@ const Experience: React.FC<ExperienceProps> = ({ rightId }) => {
           />
           <Tab label={'airmason'} className="text-gray-300 text-large min-w-50 font-bold uppercase" />
           <Tab
+            label="next"
             icon={<ArrowCircleRightOutlinedIcon />}
             onClick={onNext}
             disabled={currentPage >= totalPages}
