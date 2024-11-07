@@ -49,6 +49,7 @@ const config: Config = {
         25: '6.25rem', // 100px
         33: '8.25rem', // 132px
         121: '30.25rem', // 484px
+        360: '90rem', // 1440px
       },
       minWidth: {
         10: '2.5rem', // 40px

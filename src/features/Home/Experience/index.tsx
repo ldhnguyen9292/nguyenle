@@ -3,7 +3,7 @@ import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOu
 import { Box, List, ListItem, Tab, Tabs } from '@mui/material';
 import { useState } from 'react';
 
-import Boho from '@/assets/images/boho.jpg';
+import Boho from '@/assets/images/cybersoft.webp';
 import { Button, Text } from '@/components/Elements';
 
 interface ExperienceProps {

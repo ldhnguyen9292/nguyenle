@@ -1,8 +1,8 @@
 import { Grid2 } from '@mui/material';
 
-import HomeCover3 from '@/assets/images/home-cover-3.png';
-import HomeCover4 from '@/assets/images/home-cover-4.png';
-import HomeCover5 from '@/assets/images/home-cover-5.png';
+import HomeCover3 from '@/assets/images/home-cover-3.webp';
+import HomeCover4 from '@/assets/images/home-cover-4.webp';
+import HomeCover5 from '@/assets/images/home-cover-5.webp';
 import { Image, Text } from '@/components/Elements';
 import LeftShape from './LeftShape';
 import RightShape from './RightShape';

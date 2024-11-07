@@ -2,7 +2,7 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { Box } from '@mui/material';
 
-import Cybersoft from '@/assets/images/cybersoft.jpg';
+import Cybersoft from '@/assets/images/cybersoft.webp';
 import { Button, Text } from '@/components/Elements';
 
 interface EducationBackgroundProps {
