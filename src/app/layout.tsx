@@ -9,6 +9,7 @@ import { Container } from '@/components/Elements';
 import { Footer, Header } from '@/components/Layout';
 import { globalEnv } from '@/config/globalEnv';
 import theme from '@/config/theme';
+import { LoaderProvider } from '@/provider';
 
 const lexend = Lexend({
   weight: ['200', '300', '400', '500', '600', '700', '800'],
@@ -42,11 +43,13 @@ export default function RootLayout({
           <AppRouterCacheProvider options={{ key: 'css', prepend: true }}>
             <ThemeProvider theme={theme}>
               <CssBaseline />
-              <Container>
-                <Header />
-                {children}
-                <Footer />
-              </Container>
+              <LoaderProvider>
+                <Container>
+                  <Header />
+                  {children}
+                  <Footer />
+                </Container>
+              </LoaderProvider>
             </ThemeProvider>
           </AppRouterCacheProvider>
         </StyledEngineProvider>

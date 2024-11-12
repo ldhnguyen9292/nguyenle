@@ -1,7 +1,8 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
+
 import linkedin from '@/assets/images/linkedin.svg';
-import topButton from '@/assets/images/top-button.webp';
 import { Image } from '@/components/Elements';
 
 const SocialNetworkIcons = {
@@ -9,6 +10,8 @@ const SocialNetworkIcons = {
 };
 
 const Footer: React.FC = () => {
+  const router = useRouter();
+
   // On click to scroll to top
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -21,20 +24,13 @@ const Footer: React.FC = () => {
 
   // Redirect to home page
   const redirectToHomePage = () => {
-    window.location.href = '/';
+    router.push('/');
   };
 
   return (
     <footer className="relative flex flex-col">
       <div onClick={scrollToTop} role="button" tabIndex={0}>
-        <Image
-          src={topButton.src}
-          alt="Top Button"
-          width={160}
-          height={188}
-          priority={true}
-          className="absolute top-0 left-20 cursor-pointer"
-        />
+        <div className="w-[100px] h-[117px] absolute top-0 left-20 cursor-pointer bg-top-white hover:bg-top-black bg-contain" />
       </div>
       <section className="bg-primary-2 min-w-full h-23.5 border-b-2 border-solid border-b-primary-0 flex align-center justify-around mr-5">
         <div></div>

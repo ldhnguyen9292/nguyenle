@@ -20,6 +20,13 @@ const config: Config = {
         tertiary: { 0: '#4dbeff', 1: '#4ebeff' },
         fourth: '#202020',
       },
+      backgroundImage: {
+        'menu-background': 'url(/images/menu-background.webp)',
+        'top-white': 'url(/images/top-white.webp)',
+        'top-black': 'url(/images/top-black.webp)',
+        'button-white':
+          "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAAAsCAYAAACHUEHxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDA2IDc5LmRhYmFjYmIsIDIwMjEvMDQvMTQtMDA6Mzk6NDQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMi40IChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkQ5QUFEMEY5REFDRjExRUVBMTM3QTkwMzg5OEU1QUUwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkQ5QUFEMEZBREFDRjExRUVBMTM3QTkwMzg5OEU1QUUwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RDlBQUQwRjdEQUNGMTFFRUExMzdBOTAzODk4RTVBRTAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RDlBQUQwRjhEQUNGMTFFRUExMzdBOTAzODk4RTVBRTAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5as6JYAAADVklEQVR42uydW4hNURjH17cxJBmhlAeRUHihqDEyJecBTRl5mERRJJeXeaNQLmlelKKUW/NgNKVpyO0BE3J5IE9DMWrGCykNI4kxzvH/7K1O05mZc9l7n5n9/f/17+ucs/dap2//WuvsddlHMpmMo6iwJeX+AgB7HkIdXAMvgmfAE3hpRpV64Ydwo4g8KytYAKoa4Qi8eiQAToWiP/AewHVOygBUJcIZeAuvQyLVD1dJzFDNRbgNz2f+E61WiRGqOQiP4ZnMe+L1RWKCairCU3gBc25CGS8GqCoQ2giVKb33YqjkEryKuTallki7QrRWRxEOMc+m1A0vkQih2ha0VhyjsiMdKF0pIh0SEVQ66HkHrmCuzeg3vB5Q3dUXXgRQLURoJVTmtPs/VKGDBah0nu8WPIV5NqUTgOpi9hsSIlQTER7Ay5hnW3eA8GaAlQkdLEDlBd3fBubZlHQmZQ2g+jXwg7C6wpOEypw69ZrngiqUFgut1T6E08yzKX2GVwCqzsEOkBKhqnX+dM0Y5tqMfgbd35OhDvJKgGopwhVCZUppePtwUBUNFqCahXATnsRcm9JBQNWSz4FSBFSTEZTYxcyzKV0AVDvzPVgKhGqs81eApphnU9IR9XUAqz/fEwrtCs8SKnPqgDcVAlVBYKG1OoCwg3k2pY/On1j+VuiJkidU9QjNLoJJa2rE6jtcA6heFnOy5AGV7v+757iJ1JJ0f2AdoLpRbAHeMFDpLuVrhMqcGkqBakiwANU05y+Bmc48m9IpQFXyFJ0MAtV4hPtwNfNsStfhjQArXWpBXg6oFLYmQmVOz52/riodRmG5usLjcD3zbErdcC2g+hFWgTKgtdJxqvPMsyl91d4JUL0Os1DJgioV/Fgfx1ybUR+8FlC1h12wF0ClE8pXCZU57YoCqn9gASrdUaNjFpXMsykdA1RNURWuLdZ+eDbzbErNgOpwlBUIWqwugmVKj+AUwOqLGqy04/MVrOiN8zdB9ERdkRfcblLJ14fgDrAnjsoUrHbmPPF66/wlMF1xVahgNTr/SbdUMnUZXg6o3sVZqYcKXyDudf4aHCoZ0uco6CICfVbVVrg37i+QPfJeFQw96D9EcExrdEk3kX6CXzn/HyLahtqlHIf+CjAAeu7fkAOBY9gAAAAASUVORK5CYII=')",
+      },
       borderColor: {
         primary: { 0: '#323232FF' },
         secondary: { 0: '#dee1e6' },
@@ -50,6 +57,7 @@ const config: Config = {
         33: '8.25rem', // 132px
         121: '30.25rem', // 484px
         360: '90rem', // 1440px
+        inherit: 'inherit',
       },
       minWidth: {
         10: '2.5rem', // 40px
@@ -75,6 +83,7 @@ const config: Config = {
         330: '82.5rem', // 1320px
       },
       minHeight: {
+        11.25: '2.8125rem', // 45px
         97.5: '24.375rem', // 390px
       },
       fill: {
@@ -90,20 +99,27 @@ const config: Config = {
       padding: {
         64: '16rem', // 256px
         72: '18rem', // 288px
+        80: '20rem', // 320px
+        88: '22rem', // 352px
       },
       keyframes: {
         'left-to-right': {
-          '0%': { transform: 'translateX(-50px)' },
+          '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(0)' },
         },
         'right-to-left': {
-          '0%': { transform: 'translateX(50px)' },
+          '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(0)' },
+        },
+        'right-to-center': {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
       animation: {
-        'left-to-right': 'left-to-right 3s ease-in-out',
-        'right-to-left': 'right-to-left 3s ease-in-out',
+        'left-to-right': 'left-to-right 1s ease-in-out',
+        'right-to-left': 'right-to-left 1s forwards',
+        'right-to-center': 'right-to-center 1s forwards',
       },
     },
   },
