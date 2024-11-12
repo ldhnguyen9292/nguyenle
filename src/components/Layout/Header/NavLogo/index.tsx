@@ -1,4 +1,5 @@
 import { Box } from '@mui/material';
+import { useRouter } from 'next/navigation';
 
 import { Image } from '@/components/Elements';
 
@@ -7,9 +8,11 @@ interface NavLogoProps {
 }
 
 const NavLogo: React.FC<NavLogoProps> = ({ isFixed }) => {
+  const router = useRouter();
+
   // On click to redirect to home page
   const handleClick = () => {
-    window.location.href = '/';
+    router.push('/');
   };
 
   return (

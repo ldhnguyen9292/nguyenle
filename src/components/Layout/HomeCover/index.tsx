@@ -1,4 +1,7 @@
+'use client';
+
 import { Grid2 } from '@mui/material';
+import { useEffect, useRef, useState } from 'react';
 
 import HomeCover3 from '@/assets/images/home-cover-3.webp';
 import HomeCover4 from '@/assets/images/home-cover-4.webp';
@@ -17,6 +20,34 @@ interface HomeCoverProps {
 }
 
 const HomeCover: React.FC<HomeCoverProps> = ({ leftId, rightId, topTitle, topIndex, childrenTop, childrenBottom }) => {
+  const [isAnimating, setIsAnimating] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  // When scrolling to the ref, the animation should be start
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsAnimating(true);
+          }
+        });
+      },
+      { threshold: 0.1 } // Adjust the threshold for when to start the animation
+    );
+
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
   return (
     <section className="h-330 relative">
       <Image src={HomeCover3.src} alt="Home Cover 3" className="absolute" fill />
@@ -41,11 +72,13 @@ const HomeCover: React.FC<HomeCoverProps> = ({ leftId, rightId, topTitle, topInd
 
       <div className="h-full z-10 p-0">
         <Grid2 container className="pt-[140px]" spacing={50}>
-          <Grid2 container size={12} className="h-125" spacing={0}>
-            <LeftShape id={leftId}>
+          <Grid2 ref={ref} container size={12} className="h-125" spacing={0}>
+            <LeftShape id={leftId} className={isAnimating ? 'animate-left-to-right' : ''}>
               <Text.HomeTitle text={topTitle} index={topIndex} />
             </LeftShape>
-            <RightShape id={rightId}>{childrenTop}</RightShape>
+            <RightShape id={rightId} className={isAnimating ? 'animate-right-to-left' : ''}>
+              {childrenTop}
+            </RightShape>
           </Grid2>
           <Grid2 container size={12} className="h-125" spacing={0}>
             <Grid2 size={1} />

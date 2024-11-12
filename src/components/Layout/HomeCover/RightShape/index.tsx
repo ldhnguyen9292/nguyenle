@@ -1,11 +1,15 @@
+import { twMerge } from 'tailwind-merge';
+
 interface RightShapeProps {
   id: string;
+  className?: string;
   children?: React.ReactNode;
 }
 
-const RightShape: React.FC<RightShapeProps> = ({ id, children }) => {
+const RightShape: React.FC<RightShapeProps> = ({ id, className, children }) => {
+  const parentMergedClass = twMerge('absolute top-[140px] right-[-3px]', className);
   return (
-    <div className="absolute top-[140px] right-[-3px] animate-right-to-left">
+    <div className={parentMergedClass}>
       <div className="relative">
         <svg xmlns="http://www.w3.org/2000/svg" className="absolute">
           <defs>

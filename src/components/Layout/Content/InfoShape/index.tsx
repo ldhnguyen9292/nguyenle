@@ -1,16 +1,11 @@
-import { twMerge } from 'tailwind-merge';
-
-interface LeftShapeProps {
+interface InfoShapeProps {
   id: string;
-  className?: string;
   children?: React.ReactNode;
 }
 
-const LeftShape: React.FC<LeftShapeProps> = ({ id, className, children }) => {
-  const parentMergedClass = twMerge('absolute top-[140px] left-[-92px]', className);
-
+const InfoShape: React.FC<InfoShapeProps> = ({ id, children }) => {
   return (
-    <div className={parentMergedClass}>
+    <div className="absolute top-0 left-0 animate-left-to-right">
       <div className="relative">
         <svg xmlns="http://www.w3.org/2000/svg" className="absolute">
           <defs>
@@ -79,13 +74,13 @@ z"
             </clipPath>
           </defs>
         </svg>
-        <svg width="650" height="550" viewBox="0 0 1800 1600">
+        <svg width="400" height="400" viewBox="800 0 1800 1400">
           <rect width="100%" height="100%" fill="#4ebeff" clipPath={`url(#${id})`} />
         </svg>
-        <div className="absolute z-20 top-0 left-center translate-x-center">{children}</div>
+        <div className="absolute z-20 top-[65px] left-[20px]">{children}</div>
       </div>
     </div>
   );
 };
 
-export default LeftShape;
+export default InfoShape;
