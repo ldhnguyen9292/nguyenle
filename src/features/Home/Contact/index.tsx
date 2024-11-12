@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
   });
 
   return (
-    <Grid2 container className="w-full">
+    <Grid2 container className="w-full sticky">
       <Grid2 size={7} className="px-10 py-2">
         <Box
           id="contact"
@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
             rows={4}
             placeholder="Enter question or feedback"
           />
-          <Button className="bg-tertiary-0 rounded-full px-2 py-1 w-20 m-5">Send</Button>
+          <Button className="bg-tertiary-0 text-primary rounded-full m-5 border-none">Send</Button>
         </Box>
       </Grid2>
       <Grid2 size={3}>

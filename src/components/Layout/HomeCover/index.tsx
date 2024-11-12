@@ -50,11 +50,11 @@ const HomeCover: React.FC<HomeCoverProps> = ({ leftId, rightId, topTitle, topInd
 
   return (
     <section className="h-330 relative">
-      <Image src={HomeCover3.src} alt="Home Cover 3" className="absolute" fill />
+      <Image src={HomeCover3.src} alt="Home Cover 3" className="absolute z-0" fill />
       <Image
         src={HomeCover4.src}
         alt="Home Cover 4"
-        className="absolute right-0 top-[-200px]"
+        className="absolute right-0 top-[-200px] z-0"
         width={0}
         height={0}
         priority
@@ -63,7 +63,7 @@ const HomeCover: React.FC<HomeCoverProps> = ({ leftId, rightId, topTitle, topInd
       <Image
         src={HomeCover5.src}
         alt="Home Cover 5"
-        className="absolute right-0 top-[-240px]"
+        className="absolute right-0 top-[-240px] z-0"
         width={0}
         height={0}
         priority
