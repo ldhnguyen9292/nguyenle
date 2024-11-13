@@ -203,3 +203,71 @@ export const ExperienceData = [
     ],
   },
 ];
+
+export const SkillsData = [
+  {
+    category: 'Programming Languages',
+    skills: [
+      { name: 'JavaScript', score: 5 },
+      { name: 'TypeScript', score: 5 },
+    ],
+  },
+  {
+    category: 'Web Development',
+    skills: [
+      { name: 'HTML', score: 5 },
+      { name: 'CSS', score: 5 },
+      { name: 'Node.js', score: 5 },
+      { name: 'Express', score: 5 },
+      { name: 'MySQL', score: 5 },
+      { name: 'MongoDB', score: 4 },
+      { name: 'Reactjs', score: 3 },
+    ],
+  },
+  {
+    category: 'API Development',
+    skills: [
+      { name: 'REST', score: 4 },
+      { name: 'GraphQL', score: 5 },
+    ],
+  },
+  {
+    category: 'Tools & Platforms',
+    skills: [
+      { name: 'GitLab', score: 5 },
+      { name: 'GitHub', score: 5 },
+      { name: 'AWS', score: 3 },
+      { name: 'GCP', score: 3 },
+      { name: 'Docker', score: 1 },
+    ],
+  },
+  {
+    category: 'Testing & Debugging Tools',
+    skills: [
+      { name: 'Postman', score: 5 },
+      { name: 'Jest', score: 3 },
+    ],
+  },
+  {
+    category: 'Version Control',
+    skills: [{ name: 'Git', score: 5 }],
+  },
+  {
+    category: 'Methodologies',
+    skills: [
+      { name: 'Agile/Scrum', score: 5 },
+      { name: 'Microservices', score: 3 },
+      { name: 'Serverless Architecture', score: 3 },
+      { name: 'CI/CD', score: 3 },
+    ],
+  },
+  {
+    category: 'Soft Skills',
+    skills: [
+      { name: 'Ability to Work Under Pressure', score: 5 },
+      { name: 'Time Management Skills', score: 5 },
+      { name: 'Teamwork Skills', score: 5 },
+      { name: 'Good in English', score: 4 },
+    ],
+  },
+];
