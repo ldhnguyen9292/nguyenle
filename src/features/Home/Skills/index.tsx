@@ -40,7 +40,19 @@ const Skills: React.FC = () => {
                         <Text variant="body1" className="font-normal">
                           {item.name}
                         </Text>
-                        <Rating name="read-only" value={item.score} readOnly />
+                        <Rating
+                          name="read-only"
+                          value={item.score}
+                          readOnly
+                          sx={{
+                            '.MuiRating-iconFilled': {
+                              color: '#00bfff', // Set the color for filled stars (light blue)
+                            },
+                            '.MuiRating-iconEmpty': {
+                              color: '#d3d3d3', // Set the color for empty stars (light gray)
+                            },
+                          }}
+                        />
                       </Box>
                     );
                   })}
