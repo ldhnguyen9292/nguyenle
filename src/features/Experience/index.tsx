@@ -1,6 +1,7 @@
-import { Box, Tab, Tabs, Typography } from '@mui/material';
+import { Box, Tab, Tabs } from '@mui/material';
 import { useState } from 'react';
 
+import { Text } from '@/components/Elements';
 import { ContentLayout } from '@/components/Layout';
 import { ExperienceData } from '@/constants/data';
 import Content from './Content';
@@ -39,16 +40,16 @@ const Experience: React.FC = () => {
         (item, index) =>
           activeTab === index && (
             <Box key={index} p={3}>
-              <Typography variant="h4" className="text-center">
+              <Text variant="h4" className="text-center">
                 {item.company}
-              </Typography>
-              <Typography variant="h5" className="text-center">
+              </Text>
+              <Text variant="h5" className="text-center">
                 {item.period.length > 1 ? item.period.join(' - ') : [...item.period, 'Present'].join(' - ')}
-              </Typography>
+              </Text>
               {item.address && (
-                <Typography variant="body1" className="text-center">
+                <Text variant="body1" className="text-center">
                   {item.address}
-                </Typography>
+                </Text>
               )}
 
               {item.projects.length > 0 && <Content projects={item.projects} />}
