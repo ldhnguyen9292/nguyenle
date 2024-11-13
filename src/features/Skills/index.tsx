@@ -21,7 +21,19 @@ const Skills: React.FC = () => {
                   <li key={index} className="flex justify-between items-center">
                     {skill.name}
                   </li>
-                  <Rating name="read-only" value={skill.score} readOnly />
+                  <Rating
+                    name="read-only"
+                    value={skill.score}
+                    readOnly
+                    sx={{
+                      '.MuiRating-iconFilled': {
+                        color: '#00bfff', // Set the color for filled stars (light blue)
+                      },
+                      '.MuiRating-iconEmpty': {
+                        color: '#d3d3d3', // Set the color for empty stars (light gray)
+                      },
+                    }}
+                  />
                 </Box>
               ))}
             </ul>
