@@ -22,6 +22,7 @@
     "next": "14.2.14",
     "react": "^18",
     "react-dom": "^18",
+    "react-scrollspy": "^3.4.3",
     "sharp": "^0.33.5",
     "tailwind-merge": "^2.5.3",
     "yup": "^1.4.0"
@@ -30,6 +31,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-scrollspy": "^3.3.9",
     "eslint": "^8",
     "eslint-config-next": "14.2.14",
     "husky": "^9.1.6",

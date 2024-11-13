@@ -1,4 +1,4 @@
-import { Grid2 } from '@mui/material';
+import { Box } from '@mui/material';
 
 interface ContentLayoutProps {
   children: React.ReactNode;
@@ -7,12 +7,7 @@ interface ContentLayoutProps {
 const ContentLayout: React.FC<ContentLayoutProps> = ({ children }) => {
   return (
     <div className="relative mt-10">
-      <Grid2 container>
-        <Grid2 size={2}></Grid2>
-        <Grid2 size={10} className="p-5">
-          {children}
-        </Grid2>
-      </Grid2>
+      <Box className="flex flex-col items-center justify-center px-10 py-5">{children}</Box>
     </div>
   );
 };
