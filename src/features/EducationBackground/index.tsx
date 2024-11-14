@@ -4,7 +4,7 @@ import { EducationBackgroundData } from '@/constants/data';
 
 const EducationBackground: React.FC = () => {
   return (
-    <ContentLayout className="!my-0 pt-10 pb-24 before:bg-education-bg before:bg-contain before:bg-no-repeat before:absolute before:w-full before:h-full before:bg-right-bottom before:bottom-0">
+    <ContentLayout className="!my-0 pt-10 pb-24 before:bg-education-bg before:bg-contain before:bg-no-repeat before:absolute before:w-full before:h-full before:bg-right-bottom before:bottom-0 before:grayscale">
       <Text variant="h4" className="font-bold !text-fourth mb-8 z-10">
         Education Background
       </Text>
