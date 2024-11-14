@@ -7,7 +7,5 @@ export const globalEnv = {
   EMAILJS_PUBLIC_KEY: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '',
 
   // CV
-  CV_URL:
-    process.env.NEXT_PUBLIC_CV_URL ||
-    'https://drive.google.com/file/d/1W6JxIYfikRTzQCE8eINoY_Roesqz3TFs/view?usp=sharing',
+  CV_URL: process.env.NEXT_PUBLIC_CV_URL || '/files/LE_DAI_HOANG NGUYEN-BACKEND_DEVELOPER.pdf',
 };

@@ -2,6 +2,7 @@ import { Box, Grid2 } from '@mui/material';
 
 import MyPic from '@/assets/images/my-pic.webp';
 import { Image, Text } from '@/components/Elements';
+import { PersonalSummaryData } from '@/constants/data';
 
 const AboutMe: React.FC = () => {
   return (
@@ -17,11 +18,7 @@ const AboutMe: React.FC = () => {
               Hi, I&apos;m Nguyen
             </Text>
             <Text color="primary" font="body" className="text-large text-justify font-medium">
-              I am a software engineer with 3 years of professional experience, especially in Node.js. While my
-              background is in full-stack, I also have grown a deep passion in creating scalable, efficient backend
-              systems. I own consistent motivation in self-learning so I thrive to learn new technologies, improve my
-              ability to write clean as well as reliable code. I’m currently seeking a remote, hybrid, or local position
-              near my area to contribute my skills and grow professionally.
+              {PersonalSummaryData}
             </Text>
           </Grid2>
           <Grid2 size={3} className="relative">
