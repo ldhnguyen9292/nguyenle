@@ -1,15 +1,31 @@
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { Box } from '@mui/material';
+import { useState } from 'react';
 
 import Cybersoft from '@/assets/images/cybersoft.webp';
+import PNT from '@/assets/images/dai-hoc-y-khoa-pham-ngoc-thach-diem-chuan1.webp';
 import { Button, Text } from '@/components/Elements';
+import { EducationBackgroundData } from '@/constants/data';
+import { useRouter } from 'next/navigation';
 
 interface EducationBackgroundProps {
   rightId: string;
 }
 
 const EducationBackground: React.FC<EducationBackgroundProps> = ({ rightId }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const router = useRouter();
+  const bgArray = [Cybersoft.src, PNT.src];
+
+  const handleChange = () => {
+    setActiveIndex(1 - activeIndex);
+  };
+
+  const redirectToEducationBackgroundPage = () => {
+    router.push('/education-background');
+  };
+
   return (
     <>
       <Box className="absolute w-full h-full left-[-3px] bottom-[-51%]">
@@ -24,17 +40,31 @@ const EducationBackground: React.FC<EducationBackgroundProps> = ({ rightId }) =>
           <Box className="absolute w-full bottom-0 flex flex-col pb-16">
             <Box className="flex-grow"></Box>
             <Box className="flex justify-around items-center">
-              <KeyboardArrowLeftIcon className="text-tertiary hover:text-fourth text-4x-large z-20" />
-              <Box className="flex flex-col z-20">
-                <Text font="heading" className="uppercase text-tertiary text-x-large font-x-bold">
-                  Cycbersoft
-                </Text>
-                <Text font="body" className="text-tertiary text-large font-medium">
-                  Major: Full-stack web developer
-                </Text>
-              </Box>
-              <Button.SeeMoreButton />
-              <KeyboardArrowRightIcon className="text-tertiary hover:text-fourth text-4x-large z-20" />
+              <KeyboardArrowLeftIcon
+                className="text-tertiary hover:text-fourth text-4x-large z-20"
+                onClick={handleChange}
+              />
+
+              {EducationBackgroundData.map(
+                (item, index) =>
+                  index === activeIndex && (
+                    <Box key={item.school} className="flex flex-col z-20">
+                      <Text variant="h5" font="heading" className="uppercase text-tertiary font-x-bold max-w-120">
+                        {item.school}
+                      </Text>
+                      <Text variant="h6" font="body" className="text-tertiary font-medium">
+                        Major: {item.degree}
+                      </Text>
+                    </Box>
+                  )
+              )}
+
+              <Button.SeeMoreButton onClick={redirectToEducationBackgroundPage} />
+
+              <KeyboardArrowRightIcon
+                className="text-tertiary hover:text-fourth text-4x-large z-20"
+                onClick={handleChange}
+              />
             </Box>
           </Box>
         </Box>
@@ -42,7 +72,7 @@ const EducationBackground: React.FC<EducationBackgroundProps> = ({ rightId }) =>
 
       {/* Background */}
       <svg width="1200" height="500" viewBox="0 0 1800 800">
-        <image href={Cybersoft.src} clipPath={`url(#${rightId})`} className="w-full" />
+        <image href={bgArray[activeIndex]} clipPath={`url(#${rightId})`} className="w-full" />
       </svg>
     </>
   );
