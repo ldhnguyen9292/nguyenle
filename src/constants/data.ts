@@ -1,3 +1,8 @@
+import { SVGProps } from 'react';
+
+import Gmail from '@/assets/images/gmail.svg';
+import Linkedin from '@/assets/images/linkedin.svg';
+
 export const PersonalSummaryData =
   'I am a software engineer with more than 3 years of professional experience, especially in Node.js. While my background is in full-stack, I also have a deep passion for creating scalable, efficient backend systems. I own consistent motivation in self-learning so I strive to learn new technologies and improve my ability to write clean as well as reliable code. I’m seeking a remote, hybrid, or local position near my area to contribute my skills and grow professionally.';
 export const ExperienceData = [
@@ -287,3 +292,8 @@ export const EducationBackgroundData = [
     period: ['2010', '2017'],
   },
 ];
+
+export const SocialNetworks: { [key: string]: { src: React.FC<SVGProps<SVGElement>>; name: string; url: string } } = {
+  linkedin: { src: Linkedin, name: 'LinkedIn', url: 'https://www.linkedin.com/in/nguyen-le-5450b9239' },
+  gmail: { src: Gmail, name: 'Gmail', url: 'mailto:ldhnguyen9292@gmail.com' },
+};

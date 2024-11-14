@@ -11,18 +11,20 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@emotion/cache": "^11.13.1",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.1.2",
     "@mui/material": "^6.1.2",
-    "@mui/material-nextjs": "^6.1.2",
+    "@mui/material-nextjs": "^6.1.7",
     "@svgr/webpack": "^8.1.0",
     "formik": "^2.4.6",
-    "next": "14.2.14",
+    "next": "^15.0.3",
     "react": "^18",
     "react-dom": "^18",
     "react-scrollspy": "^3.4.3",
+    "react-toastify": "^10.0.6",
     "sharp": "^0.33.5",
     "tailwind-merge": "^2.5.3",
     "yup": "^1.4.0"

@@ -2,12 +2,8 @@
 
 import { useRouter } from 'next/navigation';
 
-import linkedin from '@/assets/images/linkedin.svg';
 import { Image } from '@/components/Elements';
-
-const SocialNetworkIcons = {
-  linkedin: { src: linkedin, name: 'LinkedIn', url: 'https://www.linkedin.com/in/nguyen-le-5450b9239' },
-};
+import { SocialNetworks } from '@/constants/data';
 
 const Footer: React.FC = () => {
   const router = useRouter();
@@ -34,17 +30,16 @@ const Footer: React.FC = () => {
       </div>
       <section className="bg-primary-2 min-w-full h-23.5 border-b-2 border-solid border-b-primary-0 flex align-center justify-around mr-5">
         <div></div>
-        <div className="flex align-center justify-end m-2">
-          {Object.entries(SocialNetworkIcons).map(([key, icon], index) => {
+        <div className="flex align-center justify-end m-2 gap-5">
+          {Object.entries(SocialNetworks).map(([key, icon], index) => {
             return (
-              <icon.src
-                key={key + index}
-                alt={icon.name}
-                width={76}
-                height={70}
-                className="cursor-pointer fill-gray hover:fill-white"
-                onClick={() => redirectToSocialNetwork(icon.url)}
-              />
+              <div key={key + index} className="w-[76px] h-[76px]">
+                <icon.src
+                  className="w-full h-full cursor-pointer fill-gray hover:fill-white"
+                  preserveAspectRatio="none"
+                  onClick={() => redirectToSocialNetwork(icon.url)}
+                />
+              </div>
             );
           })}
         </div>
