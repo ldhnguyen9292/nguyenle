@@ -14,10 +14,10 @@ const AboutMe: React.FC = () => {
           className="bg-secondary-2 border-b-2 border-r-2 border-l-2 border-secondary-0 rounded-b-15 pt-10 pb-20 pl-10"
         >
           <Grid2 size={9}>
-            <Text color="primary" font="heading" className="text-2x-large font-extrabold">
+            <Text type="h6" className="font-extrabold">
               Hi, I&apos;m Nguyen
             </Text>
-            <Text color="primary" font="body" className="text-large text-justify font-medium">
+            <Text type="body1" className="text-justify font-medium">
               {PersonalSummaryData}
             </Text>
           </Grid2>

@@ -68,11 +68,13 @@ const Experience: React.FC<ExperienceProps> = ({ rightId }) => {
               )}
             >
               <Box className="relative">
-                <Text font="heading" className="uppercase font-bold text-x-large text-center">
+                <Text type="h6" className="uppercase font-bold text-center">
                   {item.project}
                 </Text>
-                <Text className="text-base">Responsibilities</Text>
-                <List sx={{ listStyleType: 'disc' }} className="text-large">
+                <Text type="body1" className="text-base">
+                  Responsibilities
+                </Text>
+                <List sx={{ listStyleType: 'disc' }} className="text-body1-lg">
                   {item.responsibilities.slice(0, 4).map((text, index) => {
                     return (
                       <ListItem sx={{ display: 'list-item' }} key={index} className="font-body text-primary text-base">

@@ -31,10 +31,9 @@ const CustomTextField: React.FC<CustomTextFieldProps> = ({ name, label, formik, 
       fullWidth
       variant="outlined"
       margin="normal"
-      className="!text-white"
       slotProps={{
-        input: { className: '!text-white' },
-        inputLabel: { className: '!text-white' },
+        input: { className: '!text-white text-body1-sm md:text-body1-md lg:text-body1-lg' },
+        inputLabel: { className: '!text-white text-body1-sm md:text-body1-md lg:text-body1-lg' },
       }}
       sx={{ '& .MuiOutlinedInput-root': { border: '#444 1px solid' } }}
     />

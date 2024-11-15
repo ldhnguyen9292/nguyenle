@@ -51,13 +51,13 @@ const Content: React.FC<ContentProps> = ({ projects }) => {
     <>
       {projects.map((project: Project, projectIndex) => (
         <Box id={project.project} key={project.project} mt={3}>
-          <Text variant="h6" className="font-bold">
+          <Text type="h6" className="font-bold">
             {projectIndex + 1}. Project: {project.project}
           </Text>
-          <Text variant="body1">Role: {project.role}</Text>
-          <Text variant="body1">Description: {project.description}</Text>
-          <Text variant="body1">Team size: {project.teamSize}</Text>
-          <Text variant="body1" className="italic">
+          <Text type="body1">Role: {project.role}</Text>
+          <Text type="body1">Description: {project.description}</Text>
+          <Text type="body1">Team size: {project.teamSize}</Text>
+          <Text type="body1" className="italic">
             Responsibilities:
           </Text>
           <ul className="list-disc">
@@ -67,7 +67,7 @@ const Content: React.FC<ContentProps> = ({ projects }) => {
               </li>
             ))}
           </ul>
-          <Text variant="body1" className="italic">
+          <Text type="body1" className="italic">
             Technologies used:
           </Text>
           <ul className="list-disc">
@@ -78,7 +78,7 @@ const Content: React.FC<ContentProps> = ({ projects }) => {
             ))}
           </ul>
           {project.reference && (
-            <Text variant="body1">
+            <Text type="body1">
               Reference:{' '}
               <Link href={project.reference} target="_blank" rel="noopener noreferrer">
                 {project.reference}
@@ -91,6 +91,7 @@ const Content: React.FC<ContentProps> = ({ projects }) => {
       <Box className="absolute top-center right-[65px]">
         <Button
           id="experience-button"
+          aria-label="experience-button"
           aria-controls={open ? 'experience-popover' : undefined}
           aria-haspopup="true"
           aria-expanded={open ? 'true' : undefined}

@@ -42,13 +42,18 @@ const config: Config = {
         body: ['var(--font-manrope)', 'sans-serif'],
       },
       fontSize: {
-        sm: '0.875rem', // 14px
-        base: '1.25rem', // 20px
-        large: '1.5rem', // 24px
-        'x-large': '3rem', // 48px
-        '2x-large': '4rem', // 64px
-        '3x-large': '5rem', // 80px
-        '4x-large': '6rem', // 96px
+        'h5-sm': '2rem',
+        'h5-md': '3rem',
+        'h5-lg': '4rem',
+        'h6-sm': '1.5rem',
+        'h6-md': '2rem',
+        'h6-lg': '3rem',
+        'body1-sm': '0.875rem',
+        'body1-md': '1rem',
+        'body1-lg': '1.25rem',
+        'body2-sm': '0.75rem',
+        'body2-md': '0.875rem',
+        'body2-lg': '1rem',
       },
       fontWeight: {
         'x-bold': '800',
