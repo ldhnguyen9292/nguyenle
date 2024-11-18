@@ -69,10 +69,10 @@ const Experience: React.FC<ExperienceProps> = ({ rightId }) => {
               )}
             >
               <Box className="relative">
-                <Text type="h5" className="uppercase font-bold text-center">
+                <Text type="h5" className="uppercase font-bold text-center !text-h5-lg">
                   {item.project}
                 </Text>
-                <Text type="h6" className="">
+                <Text type="h6" className="!text-h6-lg">
                   Responsibilities
                 </Text>
                 <List className="text-body1-lg line-clamp-6">
@@ -81,7 +81,7 @@ const Experience: React.FC<ExperienceProps> = ({ rightId }) => {
                       <ListItem
                         sx={{ display: 'list-item' }}
                         key={index}
-                        className="font-body text-primary leading-none text-body2-sm md:text-body2-md lg:text-body2-lg"
+                        className="font-body text-primary leading-none text-body2-lg"
                       >
                         <PlayArrowIcon fontSize="small" /> {text}
                       </ListItem>
