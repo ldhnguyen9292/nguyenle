@@ -63,9 +63,7 @@ const config: Config = {
         'body2-sm': '0.75rem',
         'body2-md': '0.875rem',
         'body2-lg': '1rem',
-        'body3-sm': '0.625rem',
-        'body3-md': '0.75rem',
-        'body3-lg': '0.875rem',
+        li: '1.75rem',
       },
       fontWeight: {
         'x-bold': '800',

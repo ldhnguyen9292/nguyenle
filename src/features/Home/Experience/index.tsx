@@ -81,7 +81,7 @@ const Experience: React.FC<ExperienceProps> = ({ rightId }) => {
                       <ListItem
                         sx={{ display: 'list-item' }}
                         key={index}
-                        className="font-body text-primary leading-none text-body2-lg"
+                        className="font-body text-primary leading-[1.6] text-li p-0"
                       >
                         <PlayArrowIcon fontSize="small" /> {text}
                       </ListItem>
