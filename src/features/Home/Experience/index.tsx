@@ -112,6 +112,7 @@ const Experience: React.FC<ExperienceProps> = ({ rightId }) => {
           }}
         >
           <Tab
+            title="Previous"
             icon={<ArrowCircleLeftOutlinedIcon />}
             onClick={onPrevious}
             disabled={activeTab < 1}
@@ -119,6 +120,7 @@ const Experience: React.FC<ExperienceProps> = ({ rightId }) => {
           />
           <Tab label={data[activeTab].project} className="text-gray-300 text-large min-w-50 font-bold uppercase" />
           <Tab
+            title="Next"
             icon={<ArrowCircleRightOutlinedIcon />}
             onClick={onNext}
             disabled={activeTab > totalPages - 2}

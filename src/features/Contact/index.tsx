@@ -1,5 +1,7 @@
 import { Box, Grid2 } from '@mui/material';
+import Image from 'next/image';
 
+import GGMap from '@/assets/images/gg-map.webp';
 import { Form, Text } from '@/components/Elements';
 import { ContentLayout } from '@/components/Layout';
 import { SocialNetworks } from '@/constants/data';
@@ -8,6 +10,10 @@ const Contact: React.FC = () => {
   // Redirect to social networks
   const redirectToSocialNetwork = (url: string) => {
     window.open(url, '_blank');
+  };
+
+  const handleMapClick = () => {
+    window.open('https://www.google.com/maps/place/Ho+Chi+Minh+City/@10.754792,106.695227,10z', '_blank');
   };
 
   return (
@@ -44,16 +50,15 @@ const Contact: React.FC = () => {
           >
             <Form.ContactForm />
           </Grid2>
-          <Grid2 size={{ xs: 12, md: 6 }} className="">
-            <iframe
-              name="contact-map"
-              title="contact-map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d501726.251541797!2d106.69522764999999!3d10.754792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529292e8d3dd1%3A0xf15f5aad773c112b!2sHo%20Chi%20Minh%20City!5e0!3m2!1sen!2s!4v1731561664862!5m2!1sen!2s"
-              className="border-none w-full h-full rounded-xl"
-              allowFullScreen={true}
+          <Grid2 size={{ xs: 12, md: 6 }} className="cursor-pointer" onClick={handleMapClick}>
+            <Image
+              src={GGMap.src}
+              alt="Google Static Map of Ho Chi Minh City"
+              width={0}
+              height={0}
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+              className="w-full h-full rounded-xl"
+            />
           </Grid2>
         </Grid2>
       </Box>
