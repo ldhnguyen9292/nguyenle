@@ -48,9 +48,9 @@ const Footer: React.FC = () => {
         <Image
           src="/images/logo.webp"
           alt="Logo"
-          width={200}
-          height={124}
-          priority={true}
+          width={0}
+          height={0}
+          priority
           className="w-[20vw] h-[12vw] max-w-[200px] max-h-[124px] cursor-pointer"
         />
       </section>

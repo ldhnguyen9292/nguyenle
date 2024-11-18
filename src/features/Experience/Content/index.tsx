@@ -1,7 +1,8 @@
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import { Box, Button, Popover } from '@mui/material';
-import { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import Scrollspy from 'react-scrollspy';
 
 import { Link, Text } from '@/components/Elements';
@@ -21,9 +22,18 @@ interface ContentProps {
 }
 
 const Content: React.FC<ContentProps> = ({ projects }) => {
+  // Get query params
+  const projectName = useSearchParams().get('project') || '';
+
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const headerHeight = 100;
+
+  useEffect(() => {
+    if (projectName) {
+      handleScroll(projectName);
+    }
+  }, [projectName]);
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
@@ -88,14 +98,14 @@ const Content: React.FC<ContentProps> = ({ projects }) => {
         </Box>
       ))}
 
-      <Box className="absolute top-center right-[65px]">
+      <Box className={`absolute top-center transition-all duration-100 ${open ? 'right-[290px]' : 'right-[65px]'}`}>
         <Button
           id="experience-button"
           aria-label="experience-button"
           aria-controls={open ? 'experience-popover' : undefined}
           aria-haspopup="true"
           aria-expanded={open ? 'true' : undefined}
-          className="fixed top-[50vh] bg-primary-2 rounded-s-full border-solid border-4 border-gray-500"
+          className={'fixed top-[50vh] bg-primary-2 rounded-s-full border-solid border-4 border-gray-500 p-2 mt-2'}
           onClick={handleClick}
         >
           <Box className="flex flex-col justify-center items-center">
@@ -103,50 +113,56 @@ const Content: React.FC<ContentProps> = ({ projects }) => {
             {open && <KeyboardDoubleArrowRightIcon className="text-secondary" />}
           </Box>
         </Button>
-        <Popover
-          id="experience-popover"
-          open={open}
-          anchorEl={anchorEl}
-          onClose={handleClose}
-          disableScrollLock={true}
-          anchorOrigin={{
-            vertical: 'center',
-            horizontal: 'left',
-          }}
-          transformOrigin={{
-            vertical: 'center',
-            horizontal: 'right',
-          }}
-          slotProps={{
-            paper: {
-              className: 'bg-primary-0 rounded-xl border-solid border-4 border-gray-500 p-5',
-            },
-          }}
-        >
-          <Scrollspy
-            items={projects.map((project) => project.project)}
-            currentClassName="font-bold"
-            offset={-headerHeight * 2}
-          >
-            {projects.map((project: Project) => {
-              return (
-                <li key={project.project} className={'text-secondary w-40 list-decimal ml-5'}>
-                  <Link
-                    href={`#${project.project}`}
-                    className="no-underline"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleScroll(project.project);
-                    }}
-                  >
-                    {project.project}
-                  </Link>
-                </li>
-              );
-            })}
-          </Scrollspy>
-        </Popover>
       </Box>
+      <Popover
+        id="experience-popover"
+        anchorReference="anchorPosition"
+        open={open}
+        anchorEl={anchorEl}
+        onClose={handleClose}
+        disableScrollLock={true}
+        anchorPosition={{ top: 0, left: 0 }}
+        anchorOrigin={{
+          vertical: 'center',
+          horizontal: 'right',
+        }}
+        transformOrigin={{
+          vertical: 'center',
+          horizontal: 'right',
+        }}
+        slotProps={{
+          paper: {
+            className:
+              'bg-primary-0 rounded-xl border-solid border-4 border-gray-500 p-5 !top-center !left-unset right-0',
+          },
+          root: {
+            className: 'max-w-360 mx-auto',
+          },
+        }}
+      >
+        <Scrollspy
+          items={projects.map((project) => project.project)}
+          currentClassName="font-bold"
+          offset={-headerHeight * 2}
+        >
+          {projects.map((project: Project) => {
+            return (
+              <li key={project.project} className={'text-secondary w-40 list-decimal ml-5'}>
+                <Link
+                  href={`#${project.project}`}
+                  className="no-underline"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleScroll(project.project);
+                  }}
+                >
+                  {project.project}
+                </Link>
+              </li>
+            );
+          })}
+        </Scrollspy>
+      </Popover>
     </>
   );
 };

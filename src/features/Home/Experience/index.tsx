@@ -52,8 +52,8 @@ const Experience: React.FC<ExperienceProps> = ({ rightId }) => {
     }, 1000); // Timeout should match the animation duration
   };
 
-  const redirectToExperiencePage = () => {
-    router.push('/experience');
+  const redirectToExperiencePage = (projectName: string) => {
+    router.push(`/experience?project=${projectName}`);
   };
 
   return (
@@ -90,7 +90,10 @@ const Experience: React.FC<ExperienceProps> = ({ rightId }) => {
                 </List>
 
                 {/* See more */}
-                <Button.SeeMoreButton onClick={redirectToExperiencePage} className="absolute right-0 bottom-[-50px]" />
+                <Button.SeeMoreButton
+                  onClick={() => redirectToExperiencePage(item.project)}
+                  className="absolute right-0 bottom-[-50px]"
+                />
               </Box>
             </Box>
           )

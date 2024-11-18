@@ -103,6 +103,7 @@ const config: Config = {
         142.5: '35.625rem', // 570px
         148: '37rem', // 592px
         160: '40rem', // 640px
+        '328.5': '82.125rem', // 1314px
         330: '82.5rem', // 1320px
       },
       minHeight: {
@@ -115,6 +116,7 @@ const config: Config = {
         white: '#ffffff',
       },
       inset: {
+        unset: 'unset',
         center: '50%',
       },
       translate: {

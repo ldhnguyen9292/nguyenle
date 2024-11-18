@@ -27,7 +27,8 @@ const AboutMe: React.FC = () => {
               alt="Nguyen"
               width={0}
               height={0}
-              className="absolute left-center translate-x-center top-[-40px] w-[20vw] h-[45vh]"
+              className="absolute left-center translate-x-center top-[-40px] w-[20vw]"
+              priority
             />
           </Grid2>
         </Grid2>
