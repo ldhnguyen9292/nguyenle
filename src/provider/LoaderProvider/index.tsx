@@ -25,6 +25,7 @@ const LoaderProvider: React.FC<LoaderProps> = ({ size = 100, children }) => {
     // Clean up event listener on component unmount
     return () => window.removeEventListener('load', handleLoad);
   }, []);
+
   return (
     <>
       {isLoading && (

@@ -42,13 +42,30 @@ const config: Config = {
         body: ['var(--font-manrope)', 'sans-serif'],
       },
       fontSize: {
-        sm: '0.875rem', // 14px
-        base: '1.25rem', // 20px
-        large: '1.5rem', // 24px
-        'x-large': '3rem', // 48px
-        '2x-large': '4rem', // 64px
-        '3x-large': '5rem', // 80px
-        '4x-large': '6rem', // 96px
+        'h2-sm': '3rem',
+        'h2-md': '3.5rem',
+        'h2-lg': '4rem',
+        'h3-sm': '2.5rem',
+        'h3-md': '2.75rem',
+        'h3-lg': '3rem',
+        'h4-sm': '2rem',
+        'h4-md': '2.25rem',
+        'h4-lg': '2.5rem',
+        'h5-sm': '1.5rem',
+        'h5-md': '1.75rem',
+        'h5-lg': '2rem',
+        'h6-sm': '1.25rem',
+        'h6-md': '1.5rem',
+        'h6-lg': '1.75rem',
+        'body1-sm': '0.875rem',
+        'body1-md': '1rem',
+        'body1-lg': '1.25rem',
+        'body2-sm': '0.75rem',
+        'body2-md': '0.875rem',
+        'body2-lg': '1rem',
+        'body3-sm': '0.625rem',
+        'body3-md': '0.75rem',
+        'body3-lg': '0.875rem',
       },
       fontWeight: {
         'x-bold': '800',
@@ -68,6 +85,8 @@ const config: Config = {
       },
       maxWidth: {
         120: '30rem', // 480px
+        130: '32.5rem', //520px
+        136: '34rem', // 544px
         296: '74rem', // 1184px
         360: '90rem', // 1440px
       },

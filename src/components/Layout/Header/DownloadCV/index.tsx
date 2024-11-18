@@ -8,7 +8,7 @@ const DownloadCV: React.FC = () => {
 
   return (
     <>
-      <Button onClick={downloadCV} className="bg-tertiary-0 rounded-full text-primary border-none">
+      <Button onClick={downloadCV} className="bg-tertiary-0 rounded-full !text-primary border-none">
         Download CV
       </Button>
     </>

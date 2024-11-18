@@ -11,10 +11,10 @@ const HomeTitle: React.FC<HomeTitleProps> = ({ text, index, ...props }) => {
   }`.trim();
   return (
     <>
-      <Typography {...props} className={`${baseClassName} text-x-large`}>
+      <Typography {...props} className={`${baseClassName} text-h3-lg`}>
         {text}
       </Typography>
-      <Typography {...props} className={`${baseClassName} text-4x-large`}>
+      <Typography {...props} className={`${baseClassName} text-h2-lg`}>
         {index}
       </Typography>
     </>

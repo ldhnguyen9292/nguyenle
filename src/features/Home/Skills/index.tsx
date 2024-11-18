@@ -31,13 +31,13 @@ const Skills: React.FC = () => {
             return (
               activeTab === index && (
                 <Box key={index} className="flex flex-col justify-start items-start w-full h-full">
-                  <Text variant="h6" className="font-bold">
+                  <Text type="h6" className="font-bold !text-h6-lg">
                     {skill.category}
                   </Text>
                   {skill.skills.map((item, index) => {
                     return (
                       <Box key={index} className="flex justify-between items-center w-full">
-                        <Text variant="body1" className="font-normal">
+                        <Text type="body1" className="font-normal !text-body1-lg">
                           {item.name}
                         </Text>
                         <Rating

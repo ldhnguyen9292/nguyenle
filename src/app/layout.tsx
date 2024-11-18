@@ -43,7 +43,7 @@ export default function RootLayout({
           <AppRouterCacheProvider options={{ key: 'css', prepend: true }}>
             <ThemeProvider theme={theme}>
               <CssBaseline />
-              <LoaderProvider>
+              <LoaderProvider size={80}>
                 <Container>
                   <ToastProvider>
                     <Header />

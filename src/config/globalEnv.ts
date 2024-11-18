@@ -8,4 +8,8 @@ export const globalEnv = {
 
   // CV
   CV_URL: process.env.NEXT_PUBLIC_CV_URL || '/files/LE_DAI_HOANG NGUYEN-BACKEND_DEVELOPER.pdf',
+
+  // Default width and height for home layout
+  DEFAULT_WIDTH: 1440,
+  DEFAULT_HEIGHT: 1320,
 };

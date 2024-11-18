@@ -38,8 +38,11 @@ const Header: React.FC = () => {
               <NavBar />
             </Box>
             <Box sx={{ flexGrow: 1 }} />
-            <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+            <Box className="hidden lg:block">
               <DownloadCV />
+            </Box>
+            <Box>
+              <NavBar isMobile={true} />
             </Box>
           </Toolbar>
         </Box>

@@ -41,7 +41,7 @@ const EducationBackground: React.FC<EducationBackgroundProps> = ({ rightId }) =>
             <Box className="flex-grow"></Box>
             <Box className="flex justify-around items-center">
               <KeyboardArrowLeftIcon
-                className="text-tertiary hover:text-fourth text-4x-large z-20"
+                className="text-tertiary hover:text-fourth text-h5-lg z-20"
                 onClick={handleChange}
               />
 
@@ -49,10 +49,10 @@ const EducationBackground: React.FC<EducationBackgroundProps> = ({ rightId }) =>
                 (item, index) =>
                   index === activeIndex && (
                     <Box key={item.school} className="flex flex-col z-20">
-                      <Text variant="h5" font="heading" className="uppercase text-tertiary font-x-bold max-w-120">
+                      <Text type="h6" className="uppercase text-tertiary font-x-bold max-w-136 !text-h6-lg">
                         {item.school}
                       </Text>
-                      <Text variant="h6" font="body" className="text-tertiary font-medium">
+                      <Text type="body1" className="text-tertiary font-medium !text-body1-lg">
                         Major: {item.degree}
                       </Text>
                     </Box>
@@ -62,7 +62,7 @@ const EducationBackground: React.FC<EducationBackgroundProps> = ({ rightId }) =>
               <Button.SeeMoreButton onClick={redirectToEducationBackgroundPage} />
 
               <KeyboardArrowRightIcon
-                className="text-tertiary hover:text-fourth text-4x-large z-20"
+                className="text-tertiary hover:text-fourth text-h5-lg z-20"
                 onClick={handleChange}
               />
             </Box>

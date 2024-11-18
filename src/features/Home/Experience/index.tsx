@@ -1,5 +1,6 @@
 import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutlined';
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { Box, List, ListItem, Tab, Tabs } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
@@ -68,15 +69,21 @@ const Experience: React.FC<ExperienceProps> = ({ rightId }) => {
               )}
             >
               <Box className="relative">
-                <Text font="heading" className="uppercase font-bold text-x-large text-center">
+                <Text type="h5" className="uppercase font-bold text-center !text-h5-lg">
                   {item.project}
                 </Text>
-                <Text className="text-base">Responsibilities</Text>
-                <List sx={{ listStyleType: 'disc' }} className="text-large">
-                  {item.responsibilities.slice(0, 4).map((text, index) => {
+                <Text type="h6" className="!text-h6-lg">
+                  Responsibilities
+                </Text>
+                <List className="text-body1-lg line-clamp-6">
+                  {item.responsibilities.map((text, index) => {
                     return (
-                      <ListItem sx={{ display: 'list-item' }} key={index} className="font-body text-primary text-base">
-                        {text}
+                      <ListItem
+                        sx={{ display: 'list-item' }}
+                        key={index}
+                        className="font-body text-primary leading-none text-body2-lg"
+                      >
+                        <PlayArrowIcon fontSize="small" /> {text}
                       </ListItem>
                     );
                   })}

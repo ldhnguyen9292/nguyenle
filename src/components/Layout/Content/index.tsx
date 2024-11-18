@@ -6,7 +6,9 @@ interface ContentLayoutProps {
 }
 
 const ContentLayout: React.FC<ContentLayoutProps> = ({ children, className }) => {
-  const mergedClassName = `flex flex-col items-center justify-center px-10 py-5 my-10 ${className ? className : ''}`;
+  const mergedClassName = `flex flex-col items-center justify-center px-10 py-5 my-2 md:my-4 lg:my-10 ${
+    className ? className : ''
+  }`;
   return (
     <div className="relative">
       <Box className={mergedClassName}>{children}</Box>

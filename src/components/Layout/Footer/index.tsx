@@ -25,15 +25,15 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="relative flex flex-col">
-      <div onClick={scrollToTop} role="button" tabIndex={0}>
-        <div className="w-[100px] h-[117px] absolute top-0 left-20 cursor-pointer bg-top-white hover:bg-top-black bg-contain" />
+      <div onClick={scrollToTop}>
+        <div className="w-[10vw] h-[12vw] max-w-[100px] max-h[117px] absolute top-0 left-5 md:left-10 lg:left-20 cursor-pointer bg-top-white hover:bg-top-black bg-contain bg-no-repeat" />
       </div>
-      <section className="bg-primary-2 min-w-full h-23.5 border-b-2 border-solid border-b-primary-0 flex align-center justify-around mr-5">
+      <section className="bg-primary-2 min-w-full border-b-2 border-solid border-b-primary-0 flex align-center justify-around mr-5">
         <div></div>
         <div className="flex align-center justify-end m-2 gap-5">
           {Object.entries(SocialNetworks).map(([key, icon], index) => {
             return (
-              <div key={key + index} className="w-[76px] h-[76px]">
+              <div key={key + index} className="w-[10vw] h-[10vw] max-w-[76px] max-h-[76px]">
                 <icon.src
                   className="w-full h-full cursor-pointer fill-gray hover:fill-white"
                   preserveAspectRatio="none"
@@ -44,8 +44,15 @@ const Footer: React.FC = () => {
           })}
         </div>
       </section>
-      <section className="bg-primary-0 min-w-full h-31 flex align-center justify-center" onClick={redirectToHomePage}>
-        <Image src="/images/logo.webp" alt="Logo" width={200} height={124} priority={true} className="cursor-pointer" />
+      <section className="bg-primary-0 min-w-full flex align-center justify-center" onClick={redirectToHomePage}>
+        <Image
+          src="/images/logo.webp"
+          alt="Logo"
+          width={200}
+          height={124}
+          priority={true}
+          className="w-[20vw] h-[12vw] max-w-[200px] max-h-[124px] cursor-pointer"
+        />
       </section>
     </footer>
   );

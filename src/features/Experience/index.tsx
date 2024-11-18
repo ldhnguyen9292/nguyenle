@@ -9,16 +9,11 @@ import Content from './Content';
 const Experience: React.FC = () => {
   const [activeTab, setActiveTab] = useState(1);
 
-  const handleTabChange = (_event: React.SyntheticEvent, newValue: number) => {
-    setActiveTab(newValue);
-  };
-
   return (
     <ContentLayout>
       <Tabs
         value={activeTab}
-        onChange={handleTabChange}
-        className="bg-primary-0 rounded-full px-10"
+        className="bg-primary-0 rounded-full px-2 md:px-4 lg:px-6 xl:px-10 w-[95vw] sm:w-[60vw] lg:w-[50vw] max-w-[370px] sm:max-w-[512px]"
         sx={{
           '.MuiTabs-indicator': {
             display: 'none', // Ensures the indicator is hidden
@@ -26,28 +21,36 @@ const Experience: React.FC = () => {
         }}
       >
         {ExperienceData.map((item, index) => (
-          <Tab
-            key={index}
-            label={item.shortName}
-            className={`text-secondary my-1 w-[150px] min-h-11.25 p-0 bg-no-repeat bg-contain hover:bg-button-white hover:text-primary ${
-              index === activeTab ? '!text-primary bg-button-white' : ''
+          <div
+            key={`${item.company}-${index}`}
+            className={`bg-no-repeat bg-contain hover:bg-button-white w-[33%] my-2 flex items-center justify-center min-h-0 ${
+              index === activeTab ? 'bg-button-white' : ''
             }`}
-          />
+            onClick={() => setActiveTab(index)}
+          >
+            <Tab
+              key={index}
+              label={item.shortName}
+              className={`text-secondary text-body2-sm md:text-body2-md lg:text-body2-lg p-0 w-full min-h-0 h-[33px] sm:h-[38px] md:h-[45px] lg:h-[46px] hover:text-primary font-bold ${
+                index === activeTab ? '!text-primary' : ''
+              }`}
+            />
+          </div>
         ))}
       </Tabs>
 
       {ExperienceData.map(
         (item, index) =>
           activeTab === index && (
-            <Box key={index} p={3}>
-              <Text variant="h4" className="text-center">
+            <Box key={index}>
+              <Text type="h5" className="text-center">
                 {item.company}
               </Text>
-              <Text variant="h5" className="text-center">
+              <Text type="h6" className="text-center">
                 {item.period.length > 1 ? item.period.join(' - ') : [...item.period, 'Present'].join(' - ')}
               </Text>
               {item.address && (
-                <Text variant="body1" className="text-center">
+                <Text type="body1" className="text-center">
                   {item.address}
                 </Text>
               )}
