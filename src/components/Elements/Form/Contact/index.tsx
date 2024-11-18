@@ -1,6 +1,6 @@
 'use client';
 
-import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 import { Box, Grid2 } from '@mui/material';
 import { useFormik } from 'formik';
 import { useState } from 'react';
@@ -35,8 +35,9 @@ const ContactForm: React.FC = () => {
         setIsSubmitting(false);
         toast('Message sent successfully');
       } catch (e) {
-        const error = e as EmailJSResponseStatus;
-        toast(`Failed to send message: ${error.text}`);
+        const error = e as unknown as { text: string; message: string };
+        toast(`Failed to send message: ${error.text || error.message || 'Unknown error'}`);
+        setIsSubmitting(false);
       }
     },
   });
