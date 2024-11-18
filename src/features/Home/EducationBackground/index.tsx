@@ -49,10 +49,10 @@ const EducationBackground: React.FC<EducationBackgroundProps> = ({ rightId }) =>
                 (item, index) =>
                   index === activeIndex && (
                     <Box key={item.school} className="flex flex-col z-20">
-                      <Text type="h5" className="uppercase text-tertiary font-x-bold max-w-120">
+                      <Text type="h6" className="uppercase text-tertiary font-x-bold max-w-136">
                         {item.school}
                       </Text>
-                      <Text type="h6" className="text-tertiary font-medium">
+                      <Text type="body1" className="text-tertiary font-medium">
                         Major: {item.degree}
                       </Text>
                     </Box>

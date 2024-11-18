@@ -42,18 +42,30 @@ const config: Config = {
         body: ['var(--font-manrope)', 'sans-serif'],
       },
       fontSize: {
-        'h5-sm': '2rem',
-        'h5-md': '3rem',
-        'h5-lg': '4rem',
-        'h6-sm': '1.5rem',
-        'h6-md': '2rem',
-        'h6-lg': '3rem',
+        'h2-sm': '3rem',
+        'h2-md': '3.5rem',
+        'h2-lg': '4rem',
+        'h3-sm': '2.5rem',
+        'h3-md': '2.75rem',
+        'h3-lg': '3rem',
+        'h4-sm': '2rem',
+        'h4-md': '2.25rem',
+        'h4-lg': '2.5rem',
+        'h5-sm': '1.5rem',
+        'h5-md': '1.75rem',
+        'h5-lg': '2rem',
+        'h6-sm': '1.25rem',
+        'h6-md': '1.5rem',
+        'h6-lg': '1.75rem',
         'body1-sm': '0.875rem',
         'body1-md': '1rem',
         'body1-lg': '1.25rem',
         'body2-sm': '0.75rem',
         'body2-md': '0.875rem',
         'body2-lg': '1rem',
+        'body3-sm': '0.625rem',
+        'body3-md': '0.75rem',
+        'body3-lg': '0.875rem',
       },
       fontWeight: {
         'x-bold': '800',
@@ -73,6 +85,8 @@ const config: Config = {
       },
       maxWidth: {
         120: '30rem', // 480px
+        130: '32.5rem', //520px
+        136: '34rem', // 544px
         296: '74rem', // 1184px
         360: '90rem', // 1440px
       },
