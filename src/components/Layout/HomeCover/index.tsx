@@ -22,18 +22,19 @@ interface HomeCoverProps {
 
 const HomeCover: React.FC<HomeCoverProps> = ({ leftId, rightId, topTitle, topIndex, childrenTop, childrenBottom }) => {
   const [isAnimating, setIsAnimating] = useState(false);
+
   const ref = useRef<HTMLDivElement>(null);
   const homeCoverRef = useRef<HTMLDivElement>(null);
   const topRef = useRef<HTMLDivElement>(null);
   const defaultWidth = globalEnv.DEFAULT_WIDTH;
   const defaultHeight = globalEnv.DEFAULT_HEIGHT;
-  const clientWidth =
-    document.documentElement.clientWidth > defaultWidth ? defaultWidth : document.documentElement.clientWidth;
 
   // Scale this section to fit the screen
   useEffect(() => {
     const resizeHandler = () => {
       const layoutRef = homeCoverRef.current;
+      const clientWidth =
+        document.documentElement.clientWidth > defaultWidth ? defaultWidth : document.documentElement.clientWidth;
 
       if (layoutRef) {
         const scale = clientWidth / defaultWidth;
@@ -54,7 +55,7 @@ const HomeCover: React.FC<HomeCoverProps> = ({ leftId, rightId, topTitle, topInd
     return () => {
       window.removeEventListener('resize', resizeHandler);
     };
-  }, [clientWidth, defaultWidth, defaultHeight]);
+  }, [ref.current?.clientWidth, defaultWidth, defaultHeight]);
 
   // When scrolling to the ref, the animation should be start
   useEffect(() => {
@@ -83,9 +84,9 @@ const HomeCover: React.FC<HomeCoverProps> = ({ leftId, rightId, topTitle, topInd
 
   return (
     <section ref={ref} className="w-full">
-      <Box className="w-360 relative home-layout">
-        <Box ref={homeCoverRef} className="w-full h-full">
-          <Image src={HomeCover3.src} alt="Home Cover 3" className="absolute z-0" fill />
+      <Box className="w-360 h-328.5">
+        <Box ref={homeCoverRef} className="w-full h-full relative">
+          <Image src={HomeCover3.src} alt="Home Cover 3" className="absolute z-0" fill priority />
           <Image
             src={HomeCover4.src}
             alt="Home Cover 4"
@@ -93,7 +94,7 @@ const HomeCover: React.FC<HomeCoverProps> = ({ leftId, rightId, topTitle, topInd
             width={0}
             height={0}
             priority
-            style={{ width: '514px', height: '724px' }}
+            style={{ width: '514px', height: '728px' }}
           />
           <Image
             src={HomeCover5.src}
@@ -102,7 +103,7 @@ const HomeCover: React.FC<HomeCoverProps> = ({ leftId, rightId, topTitle, topInd
             width={0}
             height={0}
             priority
-            style={{ width: '514px', height: '612px' }}
+            style={{ width: '514px', height: '610px' }}
           />
 
           <div className="h-full z-10 p-0">

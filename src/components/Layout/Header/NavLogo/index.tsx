@@ -25,7 +25,7 @@ const NavLogo: React.FC<NavLogoProps> = ({ isFixed }) => {
           isFixed ? 'w-17' : 'absolute h-[19vw] max-h-[82px] w-[23vw] max-w-[132px]'
         }`}
       >
-        <Image src="/images/logo.webp" alt="Logo" fill priority={true} />
+        <Image src="/images/logo.webp" alt="Logo" fill priority />
       </Box>
     </Box>
   );

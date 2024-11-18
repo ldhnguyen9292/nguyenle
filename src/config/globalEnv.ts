@@ -11,5 +11,5 @@ export const globalEnv = {
 
   // Default width and height for home layout
   DEFAULT_WIDTH: 1440,
-  DEFAULT_HEIGHT: 1320,
+  DEFAULT_HEIGHT: 1314,
 };

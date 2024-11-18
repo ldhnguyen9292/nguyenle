@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
 import { useEffect, useState } from 'react';
 
@@ -44,10 +44,6 @@ const LoaderProvider: React.FC<LoaderProps> = ({ size = 100, children }) => {
           }}
         >
           <CircularProgress size={size} sx={{ color: 'white' }} />
-          <Box sx={{ width: 10 }} />
-          <Typography variant="h2" color="white">
-            Loading...
-          </Typography>
         </Box>
       )}
       {!isLoading && children}
