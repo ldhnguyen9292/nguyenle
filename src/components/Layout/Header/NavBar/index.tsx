@@ -36,6 +36,7 @@ const NavBar: React.FC<NavBarProps> = ({ isMobile = false }) => {
       <div className="block lg:hidden">
         <Button
           id="menu-button"
+          title="Menu"
           aria-controls={open ? 'basic-menu' : undefined}
           aria-haspopup="true"
           aria-expanded={open ? 'true' : undefined}
