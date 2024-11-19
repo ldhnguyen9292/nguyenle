@@ -109,6 +109,9 @@ const config: Config = {
         97.5: '24.375rem', // 390px
         134: '33.5rem', // 536px
       },
+      maxHeight: {
+        'calc-1.75rem-6': 'calc(1.75rem * 1.6 * 6)',
+      },
       fill: {
         gray: '#202020',
         white: '#ffffff',

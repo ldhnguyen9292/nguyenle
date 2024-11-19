@@ -75,7 +75,7 @@ const Experience: React.FC<ExperienceProps> = ({ rightId }) => {
                 <Text type="h6" className="!text-h6-lg">
                   Responsibilities
                 </Text>
-                <List className="text-body1-lg line-clamp-6">
+                <List className="text-body1-lg line-clamp-6 max-h-calc-1.75rem-6">
                   {item.responsibilities.map((text, index) => {
                     return (
                       <ListItem
@@ -131,6 +131,7 @@ const Experience: React.FC<ExperienceProps> = ({ rightId }) => {
 
       {/* Background */}
       <svg
+        key={ExperienceCover[activeTab].src} // React will re-mount this when `key` changes
         width="1200"
         height="500"
         viewBox="0 0 1800 800"
